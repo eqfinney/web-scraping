@@ -1,15 +1,19 @@
 # testing web crawler
 
+import asyncio
 import web_crawler as webs
 
+async def test_open_page(url='http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType'):
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(webs.open_page(url))
+    loop.close()
 
-def test_open_page(url='http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType'):
-    webs.open_page(url)
 
-
-def test_locate_linked_pages(url='http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
+async def test_locate_linked_pages(url='http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
                              sequence='c=NumiTeaStore@ByType'):
-    set_of_links = webs.locate_linked_pages(url, sequence)
+    loop = asyncio.get_event_loop()
+    set_of_links = await webs.locate_linked_pages(url, sequence)
+    loop.close()
     for thing in set_of_links:
         assert sequence in thing
 

@@ -6,17 +6,22 @@
 # Make it asynchronous!
 #
 
-
-import urllib.request as urq
-from urllib.parse import urlparse
+import aiohttp
+import asyncio
+import async_timeout
 from bs4 import BeautifulSoup
+import logging
 import re
+from urllib.parse import urlparse
+
 
 try:
     import psyco
     psyco.full()
 except ImportError:
     pass
+
+logging.basicConfig(level=logging.DEBUG)
 
 
 class PageScraper:
@@ -26,17 +31,19 @@ class PageScraper:
         Initializes the PageScraper class.
         :param url: the base URL from which to scrape, string
         :param sequence: the sequence to which all URLs must be matched if they are to be scraped, string
-        :param id_sequence: the sequence used to identify a product ID, string
+        :param id_sequence: the sequence used to identify a product ID, string regex
         :param filename: the filename into which to scrape the website information, string
         """
         self.url = url
         self.sequence = sequence
         self.id_sequence = id_sequence
         self.filename = filename
-        # keeps track of all URLs that have been visited so far
+        # keeps track of all IDs that have been seen so far
         self.master_list = set()
+        # keeps track of all URLs that have been seen so far, per level
+        self.url_list = set()
 
-    def scrape_page(self):
+    async def scrape_page(self):
         """
         Scrapes a page and all underlying page whose titles match a certain sequence, writing
         the text results into a text file.
@@ -44,7 +51,8 @@ class PageScraper:
         """
 
         # find urls in layer 0
-        undiscovered = locate_linked_pages(self.url, self.sequence)
+        first_url = self.url
+        undiscovered = await self.locate_linked_pages(first_url)
         # all urls that haven't yet been seen, which should be everything
         self.master_list.update(self.scrape_layer(undiscovered))
 
@@ -55,7 +63,6 @@ class PageScraper:
         :return:
         """
         print('we have', len(undiscovered), 'objects!')
-        url_list = set()
 
         # return master list if undiscovered is empty
         if not undiscovered:
@@ -63,62 +70,90 @@ class PageScraper:
 
         else:
             # we want to discover new URLs on each page
-            for link in undiscovered:
-                id_number = find_id(link, self.id_sequence)
-                if not identify_duplicates(link, self.master_list, self.id_sequence):
-                    self.master_list.add(id_number)
-                    print(link)
-                    open_page(link, self.filename, write=True, inspect=False)
-                    url_list.update(locate_linked_pages(link, self.sequence))
+            self.url_list = self.respond_to_page(undiscovered)
 
             # recurse to the next layer, looking at only undiscovered links
-            undiscovered = (url_list - self.master_list)
+            undiscovered = (self.url_list - self.master_list)
             self.master_list.update(self.scrape_layer(undiscovered))
 
             return self.master_list
 
+    def respond_to_page(self, urls_to_investigate):
+        """
+        This is the thing that needs to be made asynchronous!!!
+        Determines if URLs have been investigated, and finds all relevant URLs on each page.
+        :param urls_to_investigate: a list of all URLs that need to be investigated
+        :return:
+        """
+        # initializing loop and list of futures
+        loop = asyncio.get_event_loop()
+        futures = list()
 
-def open_page(url, filename=None, write=True, inspect=False):
-    """
-    Opens a web page using the urllib.request library, and returns a Beautiful Soup object
-    :param url: string, the URL of the web page of interest.
-    :param filename: string, the file name to which the page should be written
-    :param write: boolean, determines whether or not to write the prettified HTML page
-    :param inspect: boolean, determines whether or not to print the prettified nested HTML page
-    :return: structured_page, the BeautifulSoup object
-    """
-    page = urq.urlopen(url)
-    structured_page = BeautifulSoup(page, 'lxml')
-    page_string = structured_page.prettify()
-    if inspect:
-        print(page_string)
-    if write:
-        with open(filename, 'a') as f:
-            f.write(page_string)
-    return structured_page
+        # adding all the matching futures to the list
+        for link in urls_to_investigate:
+            id_number = find_id(link, self.id_sequence)
+            if not identify_duplicates(link, self.master_list, self.id_sequence):
+                self.master_list.add(id_number)
+                print(link)
+                # create a future
+                future_link = asyncio.ensure_future(self.locate_linked_pages(link))
+                futures.append(future_link)
+
+        # handle the futures asynchronously
+        loop.run_until_complete(asyncio.gather(*futures))
+
+        # get the results from the futures
+        for future in futures:
+            self.url_list.update(future.result())
+
+        loop.close()
+
+    async def open_page(self, url, write=True, inspect=False):
+        """
+        Opens a web page using the urllib.request library, and returns a Beautiful Soup object
+        :param url: string, the URL of the web page of interest.
+        :param write: boolean, determines whether or not to write the prettified HTML page
+        :param inspect: boolean, determines whether or not to print the prettified nested HTML page
+        :return: structured_page, the BeautifulSoup object
+        """
+        page = await fetch(url)
+        structured_page = BeautifulSoup(page, 'lxml')
+        page_string = structured_page.prettify()
+        if inspect:
+            print(page_string)
+        if write:
+            with open(self.filename, 'a') as f:
+                # this is a blocking function but it's not bad
+                # and we don't want to worry about writing multiple things to the same file at once
+                f.write(page_string)
+        return structured_page
+
+    async def locate_linked_pages(self, url):
+        """
+        Given a page structured in a Beautiful Soup format, returns all the pages linked
+        that contain a given sequence of characters in their URLs.
+        :param url: a url for a web page, string
+        :return: linked_pages, a list of strings containing linked URLs
+        """
+        structured_page = await self.open_page(url)
+        all_links = structured_page.find_all('a')
+        set_of_links = set()
+        for link in all_links:
+            address = str(link.get('href'))
+            if self.sequence in address:
+                if not urlparse(address).netloc:
+                    scheme = urlparse(url).scheme
+                    base_url = urlparse(url).netloc
+                    address = ''.join([scheme, '://', base_url, address])
+                set_of_links.add(address)
+
+        return set_of_links
 
 
-def locate_linked_pages(url, sequence):
-    """
-    Given a page structured in a Beautiful Soup format, returns all the pages linked
-    that contain a given sequence of characters in their URLs.
-    :param url: a url for a web page, string
-    :param sequence: the sequence to match in each of the chosen URLs
-    :return: linked_pages, a list of strings containing linked URLs
-    """
-    structured_page = open_page(url)
-    all_links = structured_page.find_all('a')
-    set_of_links = set()
-    for link in all_links:
-        address = str(link.get('href'))
-        if sequence in address:
-            if not urlparse(address).netloc:
-                scheme = urlparse(url).scheme
-                base_url = urlparse(url).netloc
-                address = ''.join([scheme, '://', base_url, address])
-            set_of_links.add(address)
-
-    return set_of_links
+async def fetch(url):
+    with async_timeout.timeout(10):
+        async with aiohttp.ClientSession().get(url) as response:
+            return await response.text()
 
 
 def find_id(url, id_sequence):
@@ -155,9 +190,10 @@ def identify_duplicates(url, master_list, id_sequence):
     else:
         return True
 
-"""
+
 if __name__ == '__main__':
     NumiTeaScraper = PageScraper('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
-                                 'c=NumiTeaStore@ByType', 'NUMIS-[0-9]*', 'tea_corpus.txt')
-    NumiTeaScraper.scrape_page()
-"""
+                                 'c=NumiTeaStore@ByType', 'NUMIS-[0-9]*', 'new_tea_corpus.txt')
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(NumiTeaScraper.scrape_page())
+    loop.close()

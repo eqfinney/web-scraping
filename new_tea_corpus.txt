@@ -1,0 +1,3326 @@
+<!DOCTYPE html>
+<html class=" js_active vc_desktop vc_transform vc_transform " lang="en-US" prefix="og: http://ogp.me/ns#">
+ <head>
+  <meta content="width=1140" name="viewport"/>
+  <title>
+   Numi Organic Tea | Tea by Type | FREE 1-3 Day Shipping on Orders Over $39
+  </title>
+  <meta content="Shop Numi Organic Tea Tea by Type" name="description"/>
+  <link href="http://shop.numitea.com/tea-by-type/c/numiteastore@bytype" rel="canonical"/>
+  <meta content="og:website" property="og:type"/>
+  <meta content="Numi Organic Tea | Tea by Type | FREE 1-3 Day Shipping on Orders Over $39" property="og:title"/>
+  <meta content="Shop Numi Organic Tea Tea by Type" property="og:description"/>
+  <meta content="http://shop.numitea.com/tea-by-type/c/numiteastore@bytype" property="og:url"/>
+  <meta content="Numi Organic Tea" property="og:site_name"/>
+  <meta content="" property="og:image"/>
+  <meta content="en_US" property="og:locale"/>
+  <meta content="summary" name="twitter:card"/>
+  <meta content="@NumiTea" name="twitter:site"/>
+  <meta content="@NumiTea" name="twitter:creator"/>
+  <meta content="Numi Organic Tea | Tea by Type | FREE 1-3 Day Shipping on Orders Over $39" name="twitter:title"/>
+  <meta content="Shop Numi Organic Tea Tea by Type" name="twitter:description"/>
+  <meta content="" name="twitter:image"/>
+  <meta content="all" name="robots"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+  <meta content="A231EDA52CE3F90A64210B62165F69E0" name="msvalidate.01"/>
+  <meta content="RnXqdHzKS73jGZ6nVQtCUntpQtfmJ5gC9ZuJZGuSUBM" name="google-site-verification"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript">
+  </script>
+  <!-- Optimizely Experiment code -->
+  <script src="https://cdn.optimizely.com/js/8407390178.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   if (false == true) {
+		window["optimizely"].push({
+			"type": "waitForOriginSync",
+			"canonicalOrigins": ["shop.numitea.com", "shop.worldpantry.com"]
+		});
+	}
+  </script>
+  <script type="text/javascript">
+   window["optimizely"] = window["optimizely"] || [];
+	if ("category.aspx" == "orderreceipt.aspx") {
+		window["optimizely"].push({
+			"type": "event",
+			"eventName": "trackRevenue",
+			"tags": {
+				"revenue": 0
+
+			}
+		});
+	}
+  </script>
+  <!-- End of Optimizely Experiment code -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.0/jquery.validate.min.js" type="text/javascript">
+  </script>
+  <script src="/scripts/common.js" type="text/javascript">
+  </script>
+  <script src="/scripts/jquery/plugins/jquery.datetimepicker.js" type="text/javascript">
+  </script>
+  <script src="/scripts/remodal.min.js" type="text/javascript">
+  </script>
+  <script src="/scripts/accordionRD.js" type="text/javascript">
+  </script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js" type="text/javascript">
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet"/>
+  <link href="/styles/style.css" media="all" rel="stylesheet" type="text/css"/>
+  <link href="/styles/banner.css" rel="stylesheet" type="text/css"/>
+  <link href="/styles/fastship.css" rel="stylesheet" type="text/css"/>
+  <link href="/styles/auto_delivery.css" rel="stylesheet" type="text/css"/>
+  <link href="/styles/accordion.css" rel="stylesheet" type="text/css"/>
+  <link href="/styles/jquery.datetimepicker.css" rel="stylesheet" type="text/css"/>
+  <link href="/styles/remodal.css" rel="stylesheet" type="text/css"/>
+  <!--[if lte IE 6]>
+			<link rel="stylesheet" type="text/css" href="/styles/v2_ie6.css" media="screen" />
+		<![endif]-->
+  <link href="https://shop.numitea.com/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://shop.numitea.com/img/favicon.ico" rel="icon" type="image/x-icon"/>
+  <script type="text/javascript">
+   (function(i,s,o,g,r,a,m){{i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){{
+		  (i[r].q=i[r].q||[]).push(arguments)}},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  }})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-7944930-1', 'auto', 'PrimaryCode', {'allowLinker': true});
+ga('PrimaryCode.require', 'linker')
+ga('PrimaryCode.linker:autoLink', ['shop.worldpantry.com']);
+ga('PrimaryCode.require', 'displayfeatures');
+ga('PrimaryCode.require', 'linkid', 'linkid.js');
+
+ga('PrimaryCode.send', 'pageview');
+ga('create', 'UA-16285647-1', 'auto', 'RollupCode', {'allowLinker': true});
+ga('RollupCode.require', 'linker')
+ga('RollupCode.linker:autoLink', ['shop.worldpantry.com']);
+ga('RollupCode.require', 'displayfeatures');
+ga('RollupCode.require', 'linkid', 'linkid.js');
+
+ga('RollupCode.send', 'pageview');
+ga('create', 'UA-25749114-1', 'auto', 'PartnerCode', {'allowLinker': true});
+ga('PartnerCode.require', 'linker')
+ga('PartnerCode.linker:autoLink', ['shop.worldpantry.com']);
+ga('PartnerCode.require', 'displayfeatures');
+ga('PartnerCode.require', 'linkid', 'linkid.js');
+
+ga('PartnerCode.send', 'pageview');
+  </script>
+  <script type="text/javascript">
+   !function() {
+				var analytics = window.analytics = window.analytics || [];
+				if (!analytics.initialize) {
+					if (analytics.invoked) {
+						window.console && console.error && console.error("Segment snippet included twice.");
+					}
+					else {
+						analytics.invoked = !0;
+						analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on"];
+						analytics.factory = function(t) {
+							return function() {
+								var e = Array.prototype.slice.call(arguments);
+								e.unshift(t);
+								analytics.push(e);
+								return analytics
+							}
+						};
+						for (var t = 0; t < analytics.methods.length; t++) {
+							var e = analytics.methods[t];
+							analytics[e] = analytics.factory(e)
+						}
+						analytics.load = function(t) {
+							var e = document.createElement("script");
+							e.type = "text/javascript";
+							e.async = !0;
+							e.src = ("https:" === document.location.protocol ? "https://" : "http://") + "cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
+							var n = document.getElementsByTagName("script")[0];
+							n.parentNode.insertBefore(e, n)
+						};
+						analytics.SNIPPET_VERSION = "4.0.0";
+						analytics.load("qUf54GOBDRk2EM5nVZeKXQ7jPciMUdve");
+						analytics.page();
+					}
+				}
+			} ();
+  </script>
+ </head>
+ <body id="category_page">
+  <div id="header_container">
+   <div class="container">
+    <header class="header">
+     <div class="wrapper">
+      <div id="numi-header-internal">
+       <div id="fast_ship_container">
+        <div class="fast_ship_left">
+         <h1>
+          <a href="/Policies/FastShipInformation.aspx">
+           FREE 1-3 Day Shipping
+           <span>
+            on Orders Over $39!
+           </span>
+          </a>
+         </h1>
+         <h2>
+          When Will I Receive My Order?
+         </h2>
+        </div>
+        <div class="fast_ship_calculator" style="display: inline-block;">
+         <div id="global_query">
+          <div class="fast_ship_zip_input error">
+           <div class="input">
+            <form action="/Policies/FastShipInformation.aspx" id="FormZipInput" method="post">
+             <input class="zip_input" id="Text" name="zip_code" onclick="this.value=''" onfocus="this.value=''" type="text" value="Enter Destination ZIP Code"/>
+             <input align="absmiddle" class="zip_button" src="/img/btn/go.gif" type="image"/>
+            </form>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <input id="isOneTimeItemsOnly" type="hidden" value="False"/>
+       <script type="text/javascript">
+        // If there are only one-time items and no subscribed items then displays a dialog
+	// box to force the user to confirm that they wish to checkout.
+	function DisplayOneTimeItemsConfirmation(e) {
+		if ($('input#isOneTimeItemsOnly:hidden').val() == 'True') {
+			e.preventDefault();
+			$('[data-remodal-id=autoDeliveryOneTimeItemsOnly]').remodal('').open();
+
+		}
+	}
+       </script>
+       <div class="mini_cart">
+        <div class="cartContainer">
+         <div class="cartTotal">
+          <a href="/Cart.aspx">
+           $0.00
+          </a>
+         </div>
+         <div class="cart-icon">
+          <a href="/Cart.aspx">
+           <div class="cartCount">
+            0
+           </div>
+          </a>
+         </div>
+        </div>
+        <div class="login_buttons">
+         <a class="crossdomainlink" href="https://shop.worldpantry.com/UserAccount/SignIn.aspx?process=useraccount&amp;context=5nWtcN499Z/aamSCN3pha3xTl32m9mNy94DuzzvgR6Ajm1dOgwaYm+BTOZLTE/mW3SJ09UztpW3Zv2kH0RCyZ9SiMxorOea7NvWGijuX7nyjmZChSaSbbROiN3TuC1nI">
+          Sign In / Register
+         </a>
+        </div>
+        <div class="clear">
+        </div>
+       </div>
+      </div>
+      <div class="logo">
+       <a href="http://www.numitea.com">
+        <img alt="Picture of the Logo" id="main-logo" src="/img/logo.svg"/>
+       </a>
+      </div>
+     </div>
+    </header>
+    <nav class="nav-primary" id="nav-primary">
+     <div class="wrap">
+      <ul class="menu nav-menu menu-primary" id="menu-headermenu">
+       <li class="menu-item menu-item-1">
+        <a href="http://www.numitea.com/products/">
+         Products
+        </a>
+       </li>
+       <li class="menu-item menu-item-2">
+        <a href="http://numitea.com/our-difference/">
+         Our Difference
+        </a>
+        <ul class="sub-menu">
+         <li>
+          <a href="http://www.numitea.com/100-real-ingredients/">
+           100% Real Ingredients
+          </a>
+         </li>
+         <li>
+          <a href="http://www.numitea.com/full-leaf-quality/">
+           Full Leaf Quality
+          </a>
+         </li>
+         <li>
+          <a href="http://www.numitea.com/why-organic-tea/">
+           Why Organic Tea
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="menu-item menu-item-3">
+        <a href="http://blog.numitea.com/">
+         Tea Garden
+        </a>
+        <ul class="sub-menu">
+         <li>
+          <a href="http://blog.numitea.com/category/nourish/">
+           Nourish
+          </a>
+         </li>
+         <li>
+          <a href="http://blog.numitea.com/category/create/">
+           Create
+          </a>
+         </li>
+         <li>
+          <a href="http://blog.numitea.com/category/explore/">
+           Explore
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="menu-item menu-item-4">
+        <a href="http://www.numitea.com/impact/">
+         Impact
+        </a>
+        <ul class="sub-menu">
+         <li>
+          <a href="http://www.numitea.com/socialcertifications/">
+           Social Certifications
+          </a>
+         </li>
+         <li>
+          <a href="http://www.numitea.com/together-for-h2ope/">
+           Together for H2OPE
+          </a>
+         </li>
+         <li>
+          <a href="http://www.numitea.com/eco-responsibility/">
+           Eco-Responsibility
+          </a>
+         </li>
+         <li>
+          <a href="http://www.numitea.com/our-partners/">
+           Our Partners
+          </a>
+         </li>
+         <li>
+          <a href="http://www.numitea.com/donations/">
+           Donations
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="menu-item menu-item-5">
+        <a href="http://www.numitea.com/about/">
+         Our Story
+        </a>
+        <ul class="sub-menu">
+         <li>
+          <a href="http://www.numitea.com/our-story/">
+           Numi Vision
+          </a>
+         </li>
+         <li>
+          <a href="http://www.numitea.com/founders-story/">
+           Founders’ Story
+          </a>
+         </li>
+         <li>
+          <a href="http://www.numitea.com/numi-foundation/">
+           Numi Foundation
+          </a>
+         </li>
+         <li>
+          <a href="http://www.numitea.com/numi-team/">
+           Numi Tea’m
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="menu-item menu-item-6">
+        <a href="https://shop.numitea.com" itemprop="url">
+         Shop
+        </a>
+       </li>
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </div>
+  <script type="text/javascript">
+   $(function () {
+        $(".menu-item")
+            .mouseenter(function () {
+                //$(this).find(".sub-menu").css("opacity", "1");
+                $(this).find(".sub-menu").css("display", "block");
+            })
+            .mouseleave(function () {
+                //$(this).find(".sub-menu").css("opacity", "0");
+                $(this).find(".sub-menu").css("display", "none");
+            });
+    });
+  </script>
+  <div id="ongoing_banner">
+   <div class="one_col">
+    <div class="title_01">
+     10% Off or 15% Off Orders $75+
+     <br/>
+     Use Code:
+     <b>
+      FAIRTRADE2017
+     </b>
+    </div>
+   </div>
+  </div>
+  <div class="container main">
+   <div id="side_nav">
+    <h1>
+     <a href="/">
+      <img alt="Online Store" src="/img/online_store.png"/>
+     </a>
+    </h1>
+    <ul id="major">
+     <li class="top">
+     </li>
+     <li>
+      <a class="active" href="/Tea-by-Type/c/NumiTeaStore@ByType">
+       Tea by Type
+      </a>
+     </li>
+     <ul>
+      <li>
+       <a class="inactive" href="/Holistic-Tea--span-stylecolorf36469-fontweight-boldNEW-span/c/NumiTeaStore@ByType@Holistic">
+        Holistic Tea -
+        <span style="color:#f36469; font-weight: bold;">
+         NEW!
+        </span>
+       </a>
+      </li>
+      <li>
+       <a class="inactive" href="/Black-Tea/c/NumiTeaStore@ByType@Black">
+        Black Tea
+       </a>
+      </li>
+      <li>
+       <a class="inactive" href="/Green-Tea/c/NumiTeaStore@ByType@Green">
+        Green Tea
+       </a>
+      </li>
+      <li>
+       <a class="inactive" href="/Matcha/c/NumiTeaStore@ByType@Matcha">
+        Matcha
+       </a>
+      </li>
+      <li>
+       <a class="inactive" href="/White-Tea/c/NumiTeaStore@ByType@White">
+        White Tea
+       </a>
+      </li>
+      <li>
+       <a class="inactive" href="/Herbal-Teasans/c/NumiTeaStore@ByType@Herbal">
+        Herbal Teasans
+       </a>
+      </li>
+      <li>
+       <a class="inactive" href="/Puerh-Tea/c/NumiTeaStore@ByType@Puerh">
+        Pu·erh Tea
+       </a>
+      </li>
+      <li>
+       <a class="inactive" href="/Chocolate-Tea/c/NumiTeaStore@ByType@Indulgent">
+        Chocolate Tea
+       </a>
+      </li>
+      <li>
+       <a class="inactive" href="/Turmeric-Tea/c/NumiTeaStore@ByType@Turmeric">
+        Turmeric Tea
+       </a>
+      </li>
+      <li>
+       <a class="inactive" href="/Turmeric-Latte/c/NumiTeaStore@ByType@TurmericLatte">
+        Turmeric Latte™
+       </a>
+      </li>
+      <li>
+       <a class="inactive" href="/Flowering-Tea/c/NumiTeaStore@ByType@FloweringTea">
+        Flowering Tea™
+       </a>
+      </li>
+      <li>
+       <a class="inactive" href="/Oolong-Tea/c/NumiTeaStore@ByType@Oolong">
+        Oolong Tea
+       </a>
+      </li>
+     </ul>
+     <li class="bottom">
+     </li>
+    </ul>
+    <ul class="minor">
+     <li class="category_header">
+      <a href="/Tea-Bags/c/NumiTeaStore@Teabag">
+       Tea Bags
+      </a>
+     </li>
+     <li class="category_header">
+      <a href="/Loose-Leaf-Tea/c/NumiTeaStore@LooseTea">
+       Loose Leaf Tea
+      </a>
+     </li>
+     <li class="bottom">
+     </li>
+     <li class="category_header">
+      <a href="/Flowering-Tea/c/NumiTeaStore@FloweringTea">
+       Flowering Tea™
+      </a>
+     </li>
+     <li class="bottom">
+     </li>
+     <li class="category_header">
+      <a href="/Nspire-Tea-Sachets/c/NumiTeaStore@Nspire@Hot">
+       Nspire Tea -
+       <span style="color:#f36469; font-weight: bold;">
+        NEW!
+       </span>
+      </a>
+     </li>
+     <li class="bottom">
+     </li>
+     <li class="category_header">
+      <a href="/Iced-Tea/c/NumiTeaStore@IcedTea">
+       Iced Tea
+      </a>
+     </li>
+     <li class="bottom">
+     </li>
+     <li class="category_header">
+      <a href="/Tea-Gifts/c/NumiTeaStore@Gifts">
+       Tea Gifts
+      </a>
+     </li>
+     <li class="category_header">
+      <a href="/Accessories/c/NumiTeaStore@Teaware">
+       Accessories
+      </a>
+     </li>
+     <li class="bottom">
+     </li>
+     <li class="category_header">
+      <a href="/Best-Sellers/c/NumiTeaStore@BestSellers">
+       Best Sellers
+      </a>
+     </li>
+     <li class="category_header">
+      <a href="/New-Products/c/NumiTeaStore@New">
+       New Products
+      </a>
+     </li>
+     <li class="category_header">
+      <a href="/Specials/c/NumiTeaStore@Specials">
+       Specials
+      </a>
+     </li>
+     <li class="bottom">
+     </li>
+    </ul>
+   </div>
+   <div id="welcome">
+    <div class="message">
+     <h1>
+      Join our Communi’tea!
+     </h1>
+     <p>
+      SIGN UP FOR OUR NEWSLETTER
+      <span>
+       and GET 10% off!
+      </span>
+     </p>
+    </div>
+    <script type="text/javascript">
+     function getFocus(inputEl) {
+		    if (inputEl.value === inputEl.defaultValue) {
+		        inputEl.value = "";
+		    }
+		}
+		function loseFocus(inputEl) {
+		    if (inputEl.value === "") {
+		        inputEl.value = inputEl.defaultValue;
+		    }
+		}
+    </script>
+    <div class="signupblock">
+     <form action="https://app.bronto.com/public/webform/process/" method="post">
+      <input name="fid" type="hidden" value="f5idzitzbo9jtahgtu1ikrb42no1m"/>
+      <input name="sid" type="hidden" value="1af9cc4861de98c55fce7267323759b2"/>
+      <input name="delid" type="hidden" value=""/>
+      <input name="subid" type="hidden" value=""/>
+      <input name="td" type="hidden" value=""/>
+      <input class="text field fb-email" name="174861" onblur="loseFocus(this);" onfocus="getFocus(this);" type="text" value="Enter your email address"/>
+      <input class="btn" type="submit" value="Go"/>
+     </form>
+    </div>
+   </div>
+   <div id="category_container">
+    <div id="panel">
+     <img alt="Tea by Type" src="/img/heroes/bytype.jpg"/>
+    </div>
+    <div id="category_detail">
+     <h1>
+      Tea by Type
+     </h1>
+     <p>
+     </p>
+     <h2>
+      <a href="/Holistic-Tea--span-stylecolorf36469-fontweight-boldNEW-span/c/NumiTeaStore@ByType@Holistic">
+       Holistic Tea -
+       <span style="color:#f36469; font-weight: bold;">
+        NEW!
+       </span>
+      </a>
+     </h2>
+     <div id="category_product_list">
+      <div id="grid">
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Balance/p/NUMIS-106077&amp;c=NumiTeaStore@ByType@Holistic" id="NUMIS-106077">
+           <img alt="This is the picture of Balance under the category NumiTeaStore@ByType@Holistic in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-106077.png" title="Balance - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Balance/p/NUMIS-106077&amp;c=NumiTeaStore@ByType@Holistic">
+           Balance
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $40.14
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Balance/p/NUMIS-106077&amp;c=NumiTeaStore@ByType@Holistic">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Embrace/p/NUMIS-106015&amp;c=NumiTeaStore@ByType@Holistic" id="NUMIS-106015">
+           <img alt="This is the picture of Embrace under the category NumiTeaStore@ByType@Holistic in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-106015.png" title="Embrace - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Embrace/p/NUMIS-106015&amp;c=NumiTeaStore@ByType@Holistic">
+           Embrace
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $40.14
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Embrace/p/NUMIS-106015&amp;c=NumiTeaStore@ByType@Holistic">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Gratitude/p/NUMIS-106022&amp;c=NumiTeaStore@ByType@Holistic" id="NUMIS-106022">
+           <img alt="This is the picture of Gratitude under the category NumiTeaStore@ByType@Holistic in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-106022.png" title="Gratitude - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Gratitude/p/NUMIS-106022&amp;c=NumiTeaStore@ByType@Holistic">
+           Gratitude
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $40.14
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Gratitude/p/NUMIS-106022&amp;c=NumiTeaStore@ByType@Holistic">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Presence/p/NUMIS-106053&amp;c=NumiTeaStore@ByType@Holistic" id="NUMIS-106053">
+           <img alt="This is the picture of Presence under the category NumiTeaStore@ByType@Holistic in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-106053.png" title="Presence - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Presence/p/NUMIS-106053&amp;c=NumiTeaStore@ByType@Holistic">
+           Presence
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $40.14
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Presence/p/NUMIS-106053&amp;c=NumiTeaStore@ByType@Holistic">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Purpose/p/NUMIS-106066&amp;c=NumiTeaStore@ByType@Holistic" id="NUMIS-106066">
+           <img alt="This is the picture of Purpose under the category NumiTeaStore@ByType@Holistic in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-106066.png" title="Purpose - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Purpose/p/NUMIS-106066&amp;c=NumiTeaStore@ByType@Holistic">
+           Purpose
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $40.14
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Purpose/p/NUMIS-106066&amp;c=NumiTeaStore@ByType@Holistic">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Vision/p/NUMIS-106039&amp;c=NumiTeaStore@ByType@Holistic" id="NUMIS-106039">
+           <img alt="This is the picture of Vision under the category NumiTeaStore@ByType@Holistic in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-106039.png" title="Vision - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Vision/p/NUMIS-106039&amp;c=NumiTeaStore@ByType@Holistic">
+           Vision
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $40.14
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Vision/p/NUMIS-106039&amp;c=NumiTeaStore@ByType@Holistic">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <h2>
+      <a href="/Black-Tea/c/NumiTeaStore@ByType@Black">
+       Black Tea
+      </a>
+     </h2>
+     <div id="category_product_list">
+      <div id="grid">
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Aged-Earl-Grey/p/NUMIS-10170&amp;c=NumiTeaStore@ByType@Black" id="NUMIS-10170">
+           <img alt="This is the picture of Aged Earl Grey™ under the category NumiTeaStore@ByType@Black in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10170.png" title="Aged Earl Grey™ - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Aged-Earl-Grey/p/NUMIS-10170&amp;c=NumiTeaStore@ByType@Black">
+           Aged Earl Grey™
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Aged-Earl-Grey/p/NUMIS-10170&amp;c=NumiTeaStore@ByType@Black">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Aged-Earl-Grey-loose/p/NUMIS-20170&amp;c=NumiTeaStore@ByType@Black" id="NUMIS-20170">
+           <img alt="This is the picture of Aged Earl Grey™ (loose) under the category NumiTeaStore@ByType@Black in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20170.png" title="Aged Earl Grey™ (loose) - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Aged-Earl-Grey-loose/p/NUMIS-20170&amp;c=NumiTeaStore@ByType@Black">
+           Aged Earl Grey™ (loose)
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $29.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Aged-Earl-Grey-loose/p/NUMIS-20170&amp;c=NumiTeaStore@ByType@Black">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Breakfast-Blend/p/NUMIS-10220&amp;c=NumiTeaStore@ByType@Black" id="NUMIS-10220">
+           <img alt="This is the picture of Breakfast Blend under the category NumiTeaStore@ByType@Black in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10220.png" title="Breakfast Blend - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Breakfast-Blend/p/NUMIS-10220&amp;c=NumiTeaStore@ByType@Black">
+           Breakfast Blend
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Breakfast-Blend/p/NUMIS-10220&amp;c=NumiTeaStore@ByType@Black">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Breakfast-Blend-loose/p/NUMIS-20220&amp;c=NumiTeaStore@ByType@Black" id="NUMIS-20220">
+           <img alt="This is the picture of Breakfast Blend (loose) under the category NumiTeaStore@ByType@Black in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20220.png" title="Breakfast Blend (loose) - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Breakfast-Blend-loose/p/NUMIS-20220&amp;c=NumiTeaStore@ByType@Black">
+           Breakfast Blend (loose)
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $27.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Breakfast-Blend-loose/p/NUMIS-20220&amp;c=NumiTeaStore@ByType@Black">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Chinese-Breakfast/p/NUMIS-10106&amp;c=NumiTeaStore@ByType@Black" id="NUMIS-10106">
+           <img alt="This is the picture of Chinese Breakfast™ under the category NumiTeaStore@ByType@Black in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10106.png" title="Chinese Breakfast™ - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Chinese-Breakfast/p/NUMIS-10106&amp;c=NumiTeaStore@ByType@Black">
+           Chinese Breakfast™
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Chinese-Breakfast/p/NUMIS-10106&amp;c=NumiTeaStore@ByType@Black">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Chinese-Breakfast-loose/p/NUMIS-20106&amp;c=NumiTeaStore@ByType@Black" id="NUMIS-20106">
+           <img alt="This is the picture of Chinese Breakfast™ (loose) under the category NumiTeaStore@ByType@Black in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20106.png" title="Chinese Breakfast™ (loose) - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Chinese-Breakfast-loose/p/NUMIS-20106&amp;c=NumiTeaStore@ByType@Black">
+           Chinese Breakfast™ (loose)
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $29.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Chinese-Breakfast-loose/p/NUMIS-20106&amp;c=NumiTeaStore@ByType@Black">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Golden-Chai/p/NUMIS-10180&amp;c=NumiTeaStore@ByType@Black" id="NUMIS-10180">
+           <img alt="This is the picture of Golden Chai™ under the category NumiTeaStore@ByType@Black in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10180.png" title="Golden Chai™ - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Golden-Chai/p/NUMIS-10180&amp;c=NumiTeaStore@ByType@Black">
+           Golden Chai™
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Golden-Chai/p/NUMIS-10180&amp;c=NumiTeaStore@ByType@Black">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Golden-Chai-loose/p/NUMIS-20180&amp;c=NumiTeaStore@ByType@Black" id="NUMIS-20180">
+           <img alt="This is the picture of Golden Chai™ (loose) under the category NumiTeaStore@ByType@Black in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20180.png" title="Golden Chai™ (loose) - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Golden-Chai-loose/p/NUMIS-20180&amp;c=NumiTeaStore@ByType@Black">
+           Golden Chai™ (loose)
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $27.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Golden-Chai-loose/p/NUMIS-20180&amp;c=NumiTeaStore@ByType@Black">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Classic-Black/p/NUMIS-21040&amp;c=NumiTeaStore@ByType@Black" id="NUMIS-21040">
+           <img alt="This is the picture of Classic Black under the category NumiTeaStore@ByType@Black in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-21040.png" title="Classic Black - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Classic-Black/p/NUMIS-21040&amp;c=NumiTeaStore@ByType@Black">
+           Classic Black
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $5.79
+          </span>
+          -
+          <span>
+           $26.74
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Classic-Black/p/NUMIS-21040&amp;c=NumiTeaStore@ByType@Black">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/High-Mountain-Black-Ice/p/NUMIS-21001&amp;c=NumiTeaStore@ByType@Black" id="NUMIS-21001">
+           <img alt="This is the picture of High Mountain Black Ice™ under the category NumiTeaStore@ByType@Black in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-21001.png" title="High Mountain Black Ice™ - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/High-Mountain-Black-Ice/p/NUMIS-21001&amp;c=NumiTeaStore@ByType@Black">
+           High Mountain Black Ice™
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $9.49
+          </span>
+          -
+          <span>
+           $46.94
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/High-Mountain-Black-Ice/p/NUMIS-21001&amp;c=NumiTeaStore@ByType@Black">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <h2>
+      <a href="/Green-Tea/c/NumiTeaStore@ByType@Green">
+       Green Tea
+      </a>
+     </h2>
+     <div id="category_product_list">
+      <div id="grid">
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Decaf-Ginger-Lemon/p/NUMIS-10260&amp;c=NumiTeaStore@ByType@Green" id="NUMIS-10260">
+           <img alt="This is the picture of Decaf Ginger Lemon under the category NumiTeaStore@ByType@Green in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10260.png" title="Decaf Ginger Lemon - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Decaf-Ginger-Lemon/p/NUMIS-10260&amp;c=NumiTeaStore@ByType@Green">
+           Decaf Ginger Lemon
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Decaf-Ginger-Lemon/p/NUMIS-10260&amp;c=NumiTeaStore@ByType@Green">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Gunpowder-Green/p/NUMIS-10109&amp;c=NumiTeaStore@ByType@Green" id="NUMIS-10109">
+           <img alt="This is the picture of Gunpowder Green under the category NumiTeaStore@ByType@Green in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10109.png" title="Gunpowder Green - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Gunpowder-Green/p/NUMIS-10109&amp;c=NumiTeaStore@ByType@Green">
+           Gunpowder Green
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Gunpowder-Green/p/NUMIS-10109&amp;c=NumiTeaStore@ByType@Green">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Gunpowder-Green-loose/p/NUMIS-20109&amp;c=NumiTeaStore@ByType@Green" id="NUMIS-20109">
+           <img alt="This is the picture of Gunpowder Green (loose) under the category NumiTeaStore@ByType@Green in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20109.png" title="Gunpowder Green (loose) - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Gunpowder-Green-loose/p/NUMIS-20109&amp;c=NumiTeaStore@ByType@Green">
+           Gunpowder Green (loose)
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $22.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Gunpowder-Green-loose/p/NUMIS-20109&amp;c=NumiTeaStore@ByType@Green">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Jasmine-Green/p/NUMIS-10108&amp;c=NumiTeaStore@ByType@Green" id="NUMIS-10108">
+           <img alt="This is the picture of Jasmine Green under the category NumiTeaStore@ByType@Green in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10108.png" title="Jasmine Green - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Jasmine-Green/p/NUMIS-10108&amp;c=NumiTeaStore@ByType@Green">
+           Jasmine Green
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Jasmine-Green/p/NUMIS-10108&amp;c=NumiTeaStore@ByType@Green">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Jasmine-Green-loose/p/NUMIS-20108&amp;c=NumiTeaStore@ByType@Green" id="NUMIS-20108">
+           <img alt="This is the picture of Jasmine Green (loose) under the category NumiTeaStore@ByType@Green in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20108.png" title="Jasmine Green (loose) - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Jasmine-Green-loose/p/NUMIS-20108&amp;c=NumiTeaStore@ByType@Green">
+           Jasmine Green (loose)
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $27.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Jasmine-Green-loose/p/NUMIS-20108&amp;c=NumiTeaStore@ByType@Green">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Jasmine-Pearls-loose/p/NUMIS-20580&amp;c=NumiTeaStore@ByType@Green" id="NUMIS-20580">
+           <img alt="This is the picture of Jasmine Pearls (loose) under the category NumiTeaStore@ByType@Green in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20580.png" title="Jasmine Pearls (loose) - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Jasmine-Pearls-loose/p/NUMIS-20580&amp;c=NumiTeaStore@ByType@Green">
+           Jasmine Pearls (loose)
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $79.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Jasmine-Pearls-loose/p/NUMIS-20580&amp;c=NumiTeaStore@ByType@Green">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Mate-Lemon/p/NUMIS-10250&amp;c=NumiTeaStore@ByType@Green" id="NUMIS-10250">
+           <img alt="This is the picture of Mate Lemon under the category NumiTeaStore@ByType@Green in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10250.png" title="Mate Lemon - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Mate-Lemon/p/NUMIS-10250&amp;c=NumiTeaStore@ByType@Green">
+           Mate Lemon
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Mate-Lemon/p/NUMIS-10250&amp;c=NumiTeaStore@ByType@Green">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Toasted-Rice/p/NUMIS-10300&amp;c=NumiTeaStore@ByType@Green" id="NUMIS-10300">
+           <img alt="This is the picture of Toasted Rice under the category NumiTeaStore@ByType@Green in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10300.png" title="Toasted Rice - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Toasted-Rice/p/NUMIS-10300&amp;c=NumiTeaStore@ByType@Green">
+           Toasted Rice
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Toasted-Rice/p/NUMIS-10300&amp;c=NumiTeaStore@ByType@Green">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <h2>
+      <a href="/Matcha/c/NumiTeaStore@ByType@Matcha">
+       Matcha
+      </a>
+     </h2>
+     <div id="category_product_list">
+      <div id="grid">
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Ceremonial-Matcha/p/NUMIS-209006&amp;c=NumiTeaStore@ByType@Matcha" id="NUMIS-209006">
+           <img alt="This is the picture of Ceremonial Matcha under the category NumiTeaStore@ByType@Matcha in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-209006.png" title="Ceremonial Matcha - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Ceremonial-Matcha/p/NUMIS-209006&amp;c=NumiTeaStore@ByType@Matcha">
+           Ceremonial Matcha
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $19.99
+          </span>
+          -
+          <span>
+           $110.94
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Ceremonial-Matcha/p/NUMIS-209006&amp;c=NumiTeaStore@ByType@Matcha">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Citrus-Matcha/p/NUMIS-209013&amp;c=NumiTeaStore@ByType@Matcha" id="NUMIS-209013">
+           <img alt="This is the picture of Citrus Matcha under the category NumiTeaStore@ByType@Matcha in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-209013.png" title="Citrus Matcha - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Citrus-Matcha/p/NUMIS-209013&amp;c=NumiTeaStore@ByType@Matcha">
+           Citrus Matcha
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $19.99
+          </span>
+          -
+          <span>
+           $110.94
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Citrus-Matcha/p/NUMIS-209013&amp;c=NumiTeaStore@ByType@Matcha">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <h2>
+      <a href="/White-Tea/c/NumiTeaStore@ByType@White">
+       White Tea
+      </a>
+     </h2>
+     <div id="category_product_list">
+      <div id="grid">
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Orange-Spice/p/NUMIS-10240&amp;c=NumiTeaStore@ByType@White" id="NUMIS-10240">
+           <img alt="This is the picture of Orange Spice under the category NumiTeaStore@ByType@White in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10240.png" title="Orange Spice - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Orange-Spice/p/NUMIS-10240&amp;c=NumiTeaStore@ByType@White">
+           Orange Spice
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Orange-Spice/p/NUMIS-10240&amp;c=NumiTeaStore@ByType@White">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Orange-Spice-loose/p/NUMIS-20240&amp;c=NumiTeaStore@ByType@White" id="NUMIS-20240">
+           <img alt="This is the picture of Orange Spice (loose) under the category NumiTeaStore@ByType@White in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20240.png" title="Orange Spice (loose) - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Orange-Spice-loose/p/NUMIS-20240&amp;c=NumiTeaStore@ByType@White">
+           Orange Spice (loose)
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $28.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Orange-Spice-loose/p/NUMIS-20240&amp;c=NumiTeaStore@ByType@White">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/White-Rose/p/NUMIS-10280&amp;c=NumiTeaStore@ByType@White" id="NUMIS-10280">
+           <img alt="This is the picture of White Rose under the category NumiTeaStore@ByType@White in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10280.png" title="White Rose - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/White-Rose/p/NUMIS-10280&amp;c=NumiTeaStore@ByType@White">
+           White Rose
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/White-Rose/p/NUMIS-10280&amp;c=NumiTeaStore@ByType@White">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/White-Rose-loose/p/NUMIS-20280&amp;c=NumiTeaStore@ByType@White" id="NUMIS-20280">
+           <img alt="This is the picture of White Rose (loose) under the category NumiTeaStore@ByType@White in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20280.png" title="White Rose (loose) - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/White-Rose-loose/p/NUMIS-20280&amp;c=NumiTeaStore@ByType@White">
+           White Rose (loose)
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $85.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/White-Rose-loose/p/NUMIS-20280&amp;c=NumiTeaStore@ByType@White">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <h2>
+      <a href="/Herbal-Teasans/c/NumiTeaStore@ByType@Herbal">
+       Herbal Teasans
+      </a>
+     </h2>
+     <div id="category_product_list">
+      <div id="grid">
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Balance/p/NUMIS-106077&amp;c=NumiTeaStore@ByType@Herbal" id="NUMIS-106077">
+           <img alt="This is the picture of Balance under the category NumiTeaStore@ByType@Herbal in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-106077.png" title="Balance - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Balance/p/NUMIS-106077&amp;c=NumiTeaStore@ByType@Herbal">
+           Balance
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $40.14
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Balance/p/NUMIS-106077&amp;c=NumiTeaStore@ByType@Herbal">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Embrace/p/NUMIS-106015&amp;c=NumiTeaStore@ByType@Herbal" id="NUMIS-106015">
+           <img alt="This is the picture of Embrace under the category NumiTeaStore@ByType@Herbal in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-106015.png" title="Embrace - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Embrace/p/NUMIS-106015&amp;c=NumiTeaStore@ByType@Herbal">
+           Embrace
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $40.14
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Embrace/p/NUMIS-106015&amp;c=NumiTeaStore@ByType@Herbal">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Gratitude/p/NUMIS-106022&amp;c=NumiTeaStore@ByType@Herbal" id="NUMIS-106022">
+           <img alt="This is the picture of Gratitude under the category NumiTeaStore@ByType@Herbal in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-106022.png" title="Gratitude - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Gratitude/p/NUMIS-106022&amp;c=NumiTeaStore@ByType@Herbal">
+           Gratitude
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $40.14
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Gratitude/p/NUMIS-106022&amp;c=NumiTeaStore@ByType@Herbal">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Presence/p/NUMIS-106053&amp;c=NumiTeaStore@ByType@Herbal" id="NUMIS-106053">
+           <img alt="This is the picture of Presence under the category NumiTeaStore@ByType@Herbal in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-106053.png" title="Presence - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Presence/p/NUMIS-106053&amp;c=NumiTeaStore@ByType@Herbal">
+           Presence
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $40.14
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Presence/p/NUMIS-106053&amp;c=NumiTeaStore@ByType@Herbal">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Purpose/p/NUMIS-106066&amp;c=NumiTeaStore@ByType@Herbal" id="NUMIS-106066">
+           <img alt="This is the picture of Purpose under the category NumiTeaStore@ByType@Herbal in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-106066.png" title="Purpose - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Purpose/p/NUMIS-106066&amp;c=NumiTeaStore@ByType@Herbal">
+           Purpose
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $40.14
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Purpose/p/NUMIS-106066&amp;c=NumiTeaStore@ByType@Herbal">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Vision/p/NUMIS-106039&amp;c=NumiTeaStore@ByType@Herbal" id="NUMIS-106039">
+           <img alt="This is the picture of Vision under the category NumiTeaStore@ByType@Herbal in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-106039.png" title="Vision - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Vision/p/NUMIS-106039&amp;c=NumiTeaStore@ByType@Herbal">
+           Vision
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $40.14
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Vision/p/NUMIS-106039&amp;c=NumiTeaStore@ByType@Herbal">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Chamomile-Lemon/p/NUMIS-10150&amp;c=NumiTeaStore@ByType@Herbal" id="NUMIS-10150">
+           <img alt="This is the picture of Chamomile Lemon under the category NumiTeaStore@ByType@Herbal in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10150.png" title="Chamomile Lemon - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Chamomile-Lemon/p/NUMIS-10150&amp;c=NumiTeaStore@ByType@Herbal">
+           Chamomile Lemon
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Chamomile-Lemon/p/NUMIS-10150&amp;c=NumiTeaStore@ByType@Herbal">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Chamomile-Lemon-loose/p/NUMIS-20150&amp;c=NumiTeaStore@ByType@Herbal" id="NUMIS-20150">
+           <img alt="This is the picture of Chamomile Lemon (loose) under the category NumiTeaStore@ByType@Herbal in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20150.png" title="Chamomile Lemon (loose) - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Chamomile-Lemon-loose/p/NUMIS-20150&amp;c=NumiTeaStore@ByType@Herbal">
+           Chamomile Lemon (loose)
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $32.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Chamomile-Lemon-loose/p/NUMIS-20150&amp;c=NumiTeaStore@ByType@Herbal">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Dry-Desert-Lime/p/NUMIS-10101&amp;c=NumiTeaStore@ByType@Herbal" id="NUMIS-10101">
+           <img alt="This is the picture of Dry Desert Lime™ under the category NumiTeaStore@ByType@Herbal in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10101.png" title="Dry Desert Lime™ - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Dry-Desert-Lime/p/NUMIS-10101&amp;c=NumiTeaStore@ByType@Herbal">
+           Dry Desert Lime™
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Dry-Desert-Lime/p/NUMIS-10101&amp;c=NumiTeaStore@ByType@Herbal">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Green-Rooibos/p/NUMIS-10210&amp;c=NumiTeaStore@ByType@Herbal" id="NUMIS-10210">
+           <img alt="This is the picture of Green Rooibos under the category NumiTeaStore@ByType@Herbal in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10210.png" title="Green Rooibos - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Green-Rooibos/p/NUMIS-10210&amp;c=NumiTeaStore@ByType@Herbal">
+           Green Rooibos
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Green-Rooibos/p/NUMIS-10210&amp;c=NumiTeaStore@ByType@Herbal">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Honeybush/p/NUMIS-10103&amp;c=NumiTeaStore@ByType@Herbal" id="NUMIS-10103">
+           <img alt="This is the picture of Honeybush under the category NumiTeaStore@ByType@Herbal in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10103.png" title="Honeybush - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Honeybush/p/NUMIS-10103&amp;c=NumiTeaStore@ByType@Herbal">
+           Honeybush
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Honeybush/p/NUMIS-10103&amp;c=NumiTeaStore@ByType@Herbal">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Moroccan-Mint/p/NUMIS-10104&amp;c=NumiTeaStore@ByType@Herbal" id="NUMIS-10104">
+           <img alt="This is the picture of Moroccan Mint under the category NumiTeaStore@ByType@Herbal in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10104.png" title="Moroccan Mint - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Moroccan-Mint/p/NUMIS-10104&amp;c=NumiTeaStore@ByType@Herbal">
+           Moroccan Mint
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Moroccan-Mint/p/NUMIS-10104&amp;c=NumiTeaStore@ByType@Herbal">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Moroccan-Mint-loose/p/NUMIS-20104&amp;c=NumiTeaStore@ByType@Herbal" id="NUMIS-20104">
+           <img alt="This is the picture of Moroccan Mint (loose) under the category NumiTeaStore@ByType@Herbal in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20104.png" title="Moroccan Mint (loose) - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Moroccan-Mint-loose/p/NUMIS-20104&amp;c=NumiTeaStore@ByType@Herbal">
+           Moroccan Mint (loose)
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $21.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Moroccan-Mint-loose/p/NUMIS-20104&amp;c=NumiTeaStore@ByType@Herbal">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Rooibos/p/NUMIS-10102&amp;c=NumiTeaStore@ByType@Herbal" id="NUMIS-10102">
+           <img alt="This is the picture of Rooibos under the category NumiTeaStore@ByType@Herbal in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10102.png" title="Rooibos - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Rooibos/p/NUMIS-10102&amp;c=NumiTeaStore@ByType@Herbal">
+           Rooibos
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Rooibos/p/NUMIS-10102&amp;c=NumiTeaStore@ByType@Herbal">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Rooibos-Chai/p/NUMIS-10200&amp;c=NumiTeaStore@ByType@Herbal" id="NUMIS-10200">
+           <img alt="This is the picture of Rooibos Chai under the category NumiTeaStore@ByType@Herbal in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10200.png" title="Rooibos Chai - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Rooibos-Chai/p/NUMIS-10200&amp;c=NumiTeaStore@ByType@Herbal">
+           Rooibos Chai
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.49
+          </span>
+          -
+          <span>
+           $71.88
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Rooibos-Chai/p/NUMIS-10200&amp;c=NumiTeaStore@ByType@Herbal">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Rooibos-Chai-loose/p/NUMIS-20200&amp;c=NumiTeaStore@ByType@Herbal" id="NUMIS-20200">
+           <img alt="This is the picture of Rooibos Chai (loose) under the category NumiTeaStore@ByType@Herbal in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20200.png" title="Rooibos Chai (loose) - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Rooibos-Chai-loose/p/NUMIS-20200&amp;c=NumiTeaStore@ByType@Herbal">
+           Rooibos Chai (loose)
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $34.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Rooibos-Chai-loose/p/NUMIS-20200&amp;c=NumiTeaStore@ByType@Herbal">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/South-African-Teasan-Variety-Bundle/p/NUMIS-TVBSAFRICA&amp;c=NumiTeaStore@ByType@Herbal" id="NUMIS-TVBSAFRICA">
+           <img alt="This is the picture of South African Teasan Variety Bundle under the category NumiTeaStore@ByType@Herbal in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-tvbsafrica.png" title="South African Teasan Variety Bundle - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/South-African-Teasan-Variety-Bundle/p/NUMIS-TVBSAFRICA&amp;c=NumiTeaStore@ByType@Herbal">
+           South African Teasan Variety Bundle
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $41.99
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/South-African-Teasan-Variety-Bundle/p/NUMIS-TVBSAFRICA&amp;c=NumiTeaStore@ByType@Herbal">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <h2>
+      <a href="/Puerh-Tea/c/NumiTeaStore@ByType@Puerh">
+       Pu·erh Tea
+      </a>
+     </h2>
+     <div id="category_product_list">
+      <div id="grid">
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Aged-Puerh-Tea-Brick/p/NUMIS-103908&amp;c=NumiTeaStore@ByType@Puerh" id="NUMIS-103908">
+           <img alt="This is the picture of Aged Pu·erh Tea Brick under the category NumiTeaStore@ByType@Puerh in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-103908.png" title="Aged Pu·erh Tea Brick - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Aged-Puerh-Tea-Brick/p/NUMIS-103908&amp;c=NumiTeaStore@ByType@Puerh">
+           Aged Pu·erh Tea Brick
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $12.99
+          </span>
+          -
+          <span>
+           $71.94
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Aged-Puerh-Tea-Brick/p/NUMIS-103908&amp;c=NumiTeaStore@ByType@Puerh">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Cardamom-Puerh/p/NUMIS-10430&amp;c=NumiTeaStore@ByType@Puerh" id="NUMIS-10430">
+           <img alt="This is the picture of Cardamom Pu·erh under the category NumiTeaStore@ByType@Puerh in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10430.png" title="Cardamom Pu·erh - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Cardamom-Puerh/p/NUMIS-10430&amp;c=NumiTeaStore@ByType@Puerh">
+           Cardamom Pu·erh
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $8.99
+          </span>
+          -
+          <span>
+           $49.99
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Cardamom-Puerh/p/NUMIS-10430&amp;c=NumiTeaStore@ByType@Puerh">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Chocolate-Puerh/p/NUMIS-10360&amp;c=NumiTeaStore@ByType@Puerh" id="NUMIS-10360">
+           <img alt="This is the picture of Chocolate Pu·erh under the category NumiTeaStore@ByType@Puerh in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10360.png" title="Chocolate Pu·erh - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Chocolate-Puerh/p/NUMIS-10360&amp;c=NumiTeaStore@ByType@Puerh">
+           Chocolate Pu·erh
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $8.99
+          </span>
+          -
+          <span>
+           $49.99
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Chocolate-Puerh/p/NUMIS-10360&amp;c=NumiTeaStore@ByType@Puerh">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Chocolate-Puerh-loose/p/NUMIS-20360&amp;c=NumiTeaStore@ByType@Puerh" id="NUMIS-20360">
+           <img alt="This is the picture of Chocolate Pu·erh (loose) under the category NumiTeaStore@ByType@Puerh in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20360.png" title="Chocolate Pu·erh (loose) - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Chocolate-Puerh-loose/p/NUMIS-20360&amp;c=NumiTeaStore@ByType@Puerh">
+           Chocolate Pu·erh (loose)
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $47.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Chocolate-Puerh-loose/p/NUMIS-20360&amp;c=NumiTeaStore@ByType@Puerh">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Emperors-Puerh/p/NUMIS-10350&amp;c=NumiTeaStore@ByType@Puerh" id="NUMIS-10350">
+           <img alt="This is the picture of Emperor's Pu·erh under the category NumiTeaStore@ByType@Puerh in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10350.png" title="Emperor's Pu·erh - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Emperors-Puerh/p/NUMIS-10350&amp;c=NumiTeaStore@ByType@Puerh">
+           Emperor's Pu·erh
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $8.99
+          </span>
+          -
+          <span>
+           $49.99
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Emperors-Puerh/p/NUMIS-10350&amp;c=NumiTeaStore@ByType@Puerh">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Emperors-Puerh-loose/p/NUMIS-20350&amp;c=NumiTeaStore@ByType@Puerh" id="NUMIS-20350">
+           <img alt="This is the picture of Emperor's Pu·erh (loose) under the category NumiTeaStore@ByType@Puerh in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20350.png" title="Emperor's Pu·erh (loose) - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Emperors-Puerh-loose/p/NUMIS-20350&amp;c=NumiTeaStore@ByType@Puerh">
+           Emperor's Pu·erh (loose)
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $59.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Emperors-Puerh-loose/p/NUMIS-20350&amp;c=NumiTeaStore@ByType@Puerh">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Ginger-Puerh/p/NUMIS-10410&amp;c=NumiTeaStore@ByType@Puerh" id="NUMIS-10410">
+           <img alt="This is the picture of Ginger Pu·erh under the category NumiTeaStore@ByType@Puerh in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10410.png" title="Ginger Pu·erh - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Ginger-Puerh/p/NUMIS-10410&amp;c=NumiTeaStore@ByType@Puerh">
+           Ginger Pu·erh
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $8.99
+          </span>
+          -
+          <span>
+           $49.99
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Ginger-Puerh/p/NUMIS-10410&amp;c=NumiTeaStore@ByType@Puerh">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <h2>
+      <a href="/Chocolate-Tea/c/NumiTeaStore@ByType@Indulgent">
+       Chocolate Tea
+      </a>
+     </h2>
+     <div id="category_product_list">
+      <div id="grid">
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Chocolate-Earl-Grey/p/NUMIS-10502&amp;c=NumiTeaStore@ByType@Indulgent" id="NUMIS-10502">
+           <img alt="This is the picture of Chocolate Earl Grey under the category NumiTeaStore@ByType@Indulgent in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10502.png" title="Chocolate Earl Grey - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Chocolate-Earl-Grey/p/NUMIS-10502&amp;c=NumiTeaStore@ByType@Indulgent">
+           Chocolate Earl Grey
+          </a>
+         </div>
+         <div class="product_price_range">
+          (Reg.
+          <span class="sale">
+           $7.99
+          </span>
+          -
+          <span class="sale">
+           $40.14
+          </span>
+          )
+          <span>
+           $5.59
+          </span>
+          -
+          <span>
+           $28.09
+          </span>
+          <span class="product_on_sale">
+           SALE!
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Chocolate-Earl-Grey/p/NUMIS-10502&amp;c=NumiTeaStore@ByType@Indulgent">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Chocolate-Mint/p/NUMIS-10501&amp;c=NumiTeaStore@ByType@Indulgent" id="NUMIS-10501">
+           <img alt="This is the picture of Chocolate Mint under the category NumiTeaStore@ByType@Indulgent in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10501.png" title="Chocolate Mint - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Chocolate-Mint/p/NUMIS-10501&amp;c=NumiTeaStore@ByType@Indulgent">
+           Chocolate Mint
+          </a>
+         </div>
+         <div class="product_price_range">
+          (Reg.
+          <span class="sale">
+           $7.99
+          </span>
+          -
+          <span class="sale">
+           $40.14
+          </span>
+          )
+          <span>
+           $5.59
+          </span>
+          -
+          <span>
+           $28.09
+          </span>
+          <span class="product_on_sale">
+           SALE!
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Chocolate-Mint/p/NUMIS-10501&amp;c=NumiTeaStore@ByType@Indulgent">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Chocolate-Rooibos/p/NUMIS-10500&amp;c=NumiTeaStore@ByType@Indulgent" id="NUMIS-10500">
+           <img alt="This is the picture of Chocolate Rooibos under the category NumiTeaStore@ByType@Indulgent in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10500.png" title="Chocolate Rooibos - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Chocolate-Rooibos/p/NUMIS-10500&amp;c=NumiTeaStore@ByType@Indulgent">
+           Chocolate Rooibos
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $40.14
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Chocolate-Rooibos/p/NUMIS-10500&amp;c=NumiTeaStore@ByType@Indulgent">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Chocolate-Spice/p/NUMIS-10503&amp;c=NumiTeaStore@ByType@Indulgent" id="NUMIS-10503">
+           <img alt="This is the picture of Chocolate Spice under the category NumiTeaStore@ByType@Indulgent in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10503.png" title="Chocolate Spice - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Chocolate-Spice/p/NUMIS-10503&amp;c=NumiTeaStore@ByType@Indulgent">
+           Chocolate Spice
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $40.14
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Chocolate-Spice/p/NUMIS-10503&amp;c=NumiTeaStore@ByType@Indulgent">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Chocolate-Tea-Variety-Bundle/p/NUMIS-TVBIND&amp;c=NumiTeaStore@ByType@Indulgent" id="NUMIS-TVBIND">
+           <img alt="This is the picture of Chocolate Tea Variety Bundle under the category NumiTeaStore@ByType@Indulgent in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-tvbind.png" title="Chocolate Tea Variety Bundle - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Chocolate-Tea-Variety-Bundle/p/NUMIS-TVBIND&amp;c=NumiTeaStore@ByType@Indulgent">
+           Chocolate Tea Variety Bundle
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $41.99
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Chocolate-Tea-Variety-Bundle/p/NUMIS-TVBIND&amp;c=NumiTeaStore@ByType@Indulgent">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <h2>
+      <a href="/Turmeric-Tea/c/NumiTeaStore@ByType@Turmeric">
+       Turmeric Tea
+      </a>
+     </h2>
+     <div id="category_product_list">
+      <div id="grid">
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Amber-Sun/p/NUMIS-10552&amp;c=NumiTeaStore@ByType@Turmeric" id="NUMIS-10552">
+           <img alt="This is the picture of Amber Sun under the category NumiTeaStore@ByType@Turmeric in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10552.png" title="Amber Sun - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Amber-Sun/p/NUMIS-10552&amp;c=NumiTeaStore@ByType@Turmeric">
+           Amber Sun
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $40.14
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Amber-Sun/p/NUMIS-10552&amp;c=NumiTeaStore@ByType@Turmeric">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Fields-of-Gold/p/NUMIS-10553&amp;c=NumiTeaStore@ByType@Turmeric" id="NUMIS-10553">
+           <img alt="This is the picture of Fields of Gold under the category NumiTeaStore@ByType@Turmeric in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10553.png" title="Fields of Gold - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Fields-of-Gold/p/NUMIS-10553&amp;c=NumiTeaStore@ByType@Turmeric">
+           Fields of Gold
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $53.99
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Fields-of-Gold/p/NUMIS-10553&amp;c=NumiTeaStore@ByType@Turmeric">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Golden-Tonic/p/NUMIS-10551&amp;c=NumiTeaStore@ByType@Turmeric" id="NUMIS-10551">
+           <img alt="This is the picture of Golden Tonic under the category NumiTeaStore@ByType@Turmeric in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10551.png" title="Golden Tonic - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Golden-Tonic/p/NUMIS-10551&amp;c=NumiTeaStore@ByType@Turmeric">
+           Golden Tonic
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $53.99
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Golden-Tonic/p/NUMIS-10551&amp;c=NumiTeaStore@ByType@Turmeric">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Three-Roots/p/NUMIS-10550&amp;c=NumiTeaStore@ByType@Turmeric" id="NUMIS-10550">
+           <img alt="This is the picture of Three Roots under the category NumiTeaStore@ByType@Turmeric in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-10550.png" title="Three Roots - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Three-Roots/p/NUMIS-10550&amp;c=NumiTeaStore@ByType@Turmeric">
+           Three Roots
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $7.99
+          </span>
+          -
+          <span>
+           $53.99
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Three-Roots/p/NUMIS-10550&amp;c=NumiTeaStore@ByType@Turmeric">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Turmeric-Tea-Variety-Bundle/p/NUMIS-TVBTUR&amp;c=NumiTeaStore@ByType@Turmeric" id="NUMIS-TVBTUR">
+           <img alt="This is the picture of Turmeric Tea Variety Bundle under the category NumiTeaStore@ByType@Turmeric in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-tvbtur.png" title="Turmeric Tea Variety Bundle - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Turmeric-Tea-Variety-Bundle/p/NUMIS-TVBTUR&amp;c=NumiTeaStore@ByType@Turmeric">
+           Turmeric Tea Variety Bundle
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $41.99
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Turmeric-Tea-Variety-Bundle/p/NUMIS-TVBTUR&amp;c=NumiTeaStore@ByType@Turmeric">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <h2>
+      <a href="/Turmeric-Latte/c/NumiTeaStore@ByType@TurmericLatte">
+       Turmeric Latte™
+      </a>
+     </h2>
+     <div id="category_product_list">
+      <div id="grid">
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Turmeric-Chai/p/NUMIS-209037&amp;c=NumiTeaStore@ByType@TurmericLatte" id="NUMIS-209037">
+           <img alt="This is the picture of Turmeric Chai under the category NumiTeaStore@ByType@TurmericLatte in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-209037.png" title="Turmeric Chai - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Turmeric-Chai/p/NUMIS-209037&amp;c=NumiTeaStore@ByType@TurmericLatte">
+           Turmeric Chai
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $14.99
+          </span>
+          -
+          <span>
+           $83.94
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Turmeric-Chai/p/NUMIS-209037&amp;c=NumiTeaStore@ByType@TurmericLatte">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Turmeric-Cocoa/p/NUMIS-209044&amp;c=NumiTeaStore@ByType@TurmericLatte" id="NUMIS-209044">
+           <img alt="This is the picture of Turmeric Cocoa under the category NumiTeaStore@ByType@TurmericLatte in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-209044.png" title="Turmeric Cocoa - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Turmeric-Cocoa/p/NUMIS-209044&amp;c=NumiTeaStore@ByType@TurmericLatte">
+           Turmeric Cocoa
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $14.99
+          </span>
+          -
+          <span>
+           $83.94
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Turmeric-Cocoa/p/NUMIS-209044&amp;c=NumiTeaStore@ByType@TurmericLatte">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <h2>
+      <a href="/Flowering-Tea/c/NumiTeaStore@ByType@FloweringTea">
+       Flowering Tea™
+      </a>
+     </h2>
+     <div id="category_product_list">
+      <div id="grid">
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Golden-Jasmine/p/NUMIS-20830&amp;c=NumiTeaStore@ByType@FloweringTea" id="NUMIS-20830">
+           <img alt="This is the picture of Golden Jasmine under the category NumiTeaStore@ByType@FloweringTea in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20830.png" title="Golden Jasmine - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Golden-Jasmine/p/NUMIS-20830&amp;c=NumiTeaStore@ByType@FloweringTea">
+           Golden Jasmine
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $85.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Golden-Jasmine/p/NUMIS-20830&amp;c=NumiTeaStore@ByType@FloweringTea">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Shooting-Star/p/NUMIS-20820&amp;c=NumiTeaStore@ByType@FloweringTea" id="NUMIS-20820">
+           <img alt="This is the picture of Shooting Star under the category NumiTeaStore@ByType@FloweringTea in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20820.png" title="Shooting Star - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Shooting-Star/p/NUMIS-20820&amp;c=NumiTeaStore@ByType@FloweringTea">
+           Shooting Star
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $85.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Shooting-Star/p/NUMIS-20820&amp;c=NumiTeaStore@ByType@FloweringTea">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Sunset-Oolong/p/NUMIS-20850&amp;c=NumiTeaStore@ByType@FloweringTea" id="NUMIS-20850">
+           <img alt="This is the picture of Sunset Oolong under the category NumiTeaStore@ByType@FloweringTea in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20850.png" title="Sunset Oolong - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Sunset-Oolong/p/NUMIS-20850&amp;c=NumiTeaStore@ByType@FloweringTea">
+           Sunset Oolong
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $85.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Sunset-Oolong/p/NUMIS-20850&amp;c=NumiTeaStore@ByType@FloweringTea">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <h2>
+      <a href="/Oolong-Tea/c/NumiTeaStore@ByType@Oolong">
+       Oolong Tea
+      </a>
+     </h2>
+     <div id="category_product_list">
+      <div id="grid">
+       <div class="grid">
+        <div class="product_info">
+         <div class="product_image">
+          <a href="/Iron-Goddess-of-Mercy--Ti-Kuan-Yin-loose/p/NUMIS-20550&amp;c=NumiTeaStore@ByType@Oolong" id="NUMIS-20550">
+           <img alt="This is the picture of Iron Goddess of Mercy - Ti Kuan Yin (loose) under the category NumiTeaStore@ByType@Oolong in Numi Organic Tea. Click to add to cart." src="/img/thumbs/numis-20550.png" title="Iron Goddess of Mercy - Ti Kuan Yin (loose) - Click for More Information"/>
+          </a>
+          <br/>
+         </div>
+         <div class="product_name">
+          <a class="product_name" href="/Iron-Goddess-of-Mercy--Ti-Kuan-Yin-loose/p/NUMIS-20550&amp;c=NumiTeaStore@ByType@Oolong">
+           Iron Goddess of Mercy - Ti Kuan Yin (loose)
+          </a>
+         </div>
+         <div class="product_price_range">
+          <span>
+           $59.95
+          </span>
+          <br/>
+         </div>
+         <div class="product_button">
+          <a class="btn" href="/Iron-Goddess-of-Mercy--Ti-Kuan-Yin-loose/p/NUMIS-20550&amp;c=NumiTeaStore@ByType@Oolong">
+           Buy Now
+          </a>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <script type="text/javascript">
+     var rdCategoryName = 'cat';
+	var rdItemType = 'it';
+	var rdProductNumber = 'pid';
+	var rdVariantNumber = 'vid';
+	var rdQuantity = 'qty';
+
+	var showConfirmation = 'sc';
+	var showSoftConfirm = 'ssc';
+	var softConfirmTimerStarted = false;    // When set to true, the timer to fade the message box away has been started
+
+	$(document).ready(function() {
+
+		// Initially disable the submit button
+		$('button#createNew').prop('disabled', true);
+
+		// Wire up the events for all of the input controls (to enable/disable) their associated submit buttons
+		$(':input').on("change", SetStateOfSubmitButton);
+
+		if ($('input#isPartnerSite:hidden').val() == 'True') {
+			$('[data-remodal-id=autoDeliveryCreateNew]').remodal('');  // Enable the DIV as a Remodal-ready dialog box
+		}
+
+		// Check whether the Show Confirmation dialog box should be displayed
+		if ($.urlParam(showConfirmation) == 'true' && $('input#rdName:hidden').val() !== "") {
+			$('[data-remodal-id=newAutoDeliveryCongratulations]').remodal('').open();
+		}
+
+		// Check whether the Soft Confirmation dialog box should be displayed
+		if ($.urlParam(showSoftConfirm) == 'true') {
+			$('[data-remodal-id="autoDeliveryConfirmationAddition"]').remodal('').open();
+
+			// Now that the message has been displayed, strip out from the URL the query string that initiated this.
+			var url = window.location.toString();
+			var qs = "&" + showSoftConfirm + "=true";
+			if (url.indexOf(qs) > 0) {
+				var newUrl = url.replace(qs, "");
+				window.history.replaceState({}, document.title, newUrl);  // Note: This will apparently only work on HTML5 compatible browsers
+			}
+		}
+	});
+
+
+	// This event handler is fired when the content of any of the input controls changes.
+	// It then determines if the associated Submit button should be enabled or disabled.
+	function SetStateOfSubmitButton() {
+		var isInputComplete = false;  // Default assumption
+
+		// The Name and Frequency are always required
+		if ($('input#rd_newName').val() != "" && $('input#rd_interval').val() != "") {
+			isInputComplete = true;
+		}
+
+		$('button#createNew').prop('disabled', !isInputComplete);
+	}
+
+
+	// Redirects to ManageRD.aspx in shop.worldpantry.com, passing the correct RDParameters
+	// product data, if it's available.  We will handle things differently depending on what
+	// type of page we're on - ie. Benefits, Product, or Category.
+	function RedirectToManageRD() {
+		var url = 'https://shop.worldpantry.com/UserAccount/RecurringDelivery/ManageRD.aspx?context=5nWtcN499Z/aamSCN3pha3xTl32m9mNy94DuzzvgR6Ajm1dOgwaYm+BTOZLTE/mW3SJ09UztpW3Zv2kH0RCyZ9SiMxorOea7NvWGijuX7nyjmZChSaSbbROiN3TuC1nI';
+
+		var categoryName = 'NumiTeaStore@ByType';
+		if (categoryName != '') {
+			var src = createNewRD_SourceForm;  // The 'createNewRD_SourceForm' was instantiated & populated in VariantDisplay
+			var productData = document.getElementById(src).elements;
+
+			var rdpm = '&rdpm={';
+			rdpm += '\"' + rdCategoryName + '\":\"' + 'NumiTeaStore@ByType' + '\",';
+			rdpm += '\"' + rdItemType + '\":\"' + productData["itemType"].value + '\",';
+			rdpm += '\"' + rdProductNumber + '\":\"' + productData["product_number"].value + '\",';
+			rdpm += '\"' + rdVariantNumber + '\":\"' + productData["variant_number"].value + '\",';
+			rdpm += '\"' + rdQuantity + '\":\"' + productData["quantity"].value + '\"}';
+
+			url += rdpm;
+		}
+		setTimeout(function() { window.location.href = url; }, 100);
+
+//		window.location.assign(url);  // Redirect to the ManageRD page
+	}
+
+
+	// When the CreateNewRD dialog box opens, set focus to the Name textbox.
+	$(document).on('opened', '[data-remodal-id=autoDeliveryCreateNew]', function() {
+		$('input#rd_newName').focus();
+	});
+
+
+	// When the "Start Shopping" button is pressed we must close
+	// the window and force a postback that creates the new RDR.
+	$(document).on('confirmation', '[data-remodal-id=autoDeliveryCreateNew]', function() {
+		$('#createNewRDPleaseWait').show();  // Show the "Please Wait" animated GIF
+		var srcFrm;
+
+		switch ($('input#pageType:hidden').val()) {
+			case 'mrd':
+				// This is the only page in which the 'CreateNewRD' UC is embedded in the page,
+				// as opposed to being displayed as a modal dialog box.  As such, we have to
+				// handle some things differently, including how we return from the postback.
+				// To differentiate, we're going to pass the 'pageType' value.  Currently we
+				// don't need to do this for any of the other page types.
+				document.forms["createNewRD"].submit();
+				break;
+
+			case 'brd':
+				document.forms["createNewRD"].submit();
+				break;
+
+			case 'rdc':
+			case 'rdp':
+				// We must copy the values from the form, located in VariantDisplay.ascx,
+				// to the 'createNewRD' form located in this user control.
+				srcFrm = createNewRD_SourceForm;  // The 'createNewRD_SourceForm' was instantiated & populated in VariantDisplay.ascx
+
+				// This code was initiated with an "Add To Cart" button press in a VariantDisplay UC on a
+				// Product or Category page.  As such, we need to pass additional data to the server-side code.
+				$('form#createNewRD input[name="itemType"]').val(document.getElementById(srcFrm).elements["itemType"].value);
+				$('form#createNewRD input[name="product_number"]').val(document.getElementById(srcFrm).elements["product_number"].value);
+				$('form#createNewRD input[name="variant_number"]').val(document.getElementById(srcFrm).elements["variant_number"].value);
+				$('form#createNewRD input[name="quantity"]').val(document.getElementById(srcFrm).elements["quantity"].value);
+
+				document.forms["createNewRD"].submit();
+				break;
+
+			default:
+				console.log("Unknown Switch value in CreateNewRD: " + $('input#pageType:hidden').val());
+				break;
+		}
+	});
+
+
+	$(document).on('opened', '[data-remodal-id=autoDeliveryConfirmationAddition]', function() {
+		if (!softConfirmTimerStarted) {
+			softConfirmTimerStarted = true;
+			setTimeout(function() {
+				$('[data-remodal-id="autoDeliveryConfirmationAddition"]').fadeOut(
+					"slow", function() {
+						$('[data-remodal-id="autoDeliveryConfirmationAddition"]').remodal('').close();
+						$('[data-remodal-id="autoDeliveryConfirmationAddition"]').remodal('').destroy();
+					}
+			    );
+			}, 3000);
+		}
+	});
+
+
+	$(document).on('confirmation', '[data-remodal-id=autoDeliveryConfirmationAddition]', function() {
+		$('[data-remodal-id="autoDeliveryConfirmationAddition"]').remodal('').close();
+		$('[data-remodal-id="autoDeliveryConfirmationAddition"]').remodal('').destroy();
+	});
+
+
+	// jQuery function to decode a URL parameter
+	$.urlParam = function(name) {
+		var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+		if (results == null) {
+			return null;
+		}
+		else {
+			return results[1] || 0;
+		}
+	}
+    </script>
+    <input id="isRecurringDelivery" type="hidden" value="False"/>
+    <input id="isPartnerSite" type="hidden" value="True"/>
+    <input id="rdName" type="hidden" value=""/>
+    <div class="remodal" data-remodal-id="autoDeliveryCreateNew" data-remodal-options="closeOnOutsideClick:false" id="createNewRD-popup">
+     <div id="create_new_panel">
+      <button class="remodal-close" data-remodal-action="close">
+      </button>
+      <h3 id="headerNewRD">
+       Create a New Auto Delivery
+       <a href="http://shop.numitea.com/RecurringDelivery/Benefits.aspx">
+        <img alt="Benefits" height="18" src="/img/icons/more_info.gif" title="Find Out More About Auto Delivery" width="18"/>
+       </a>
+      </h3>
+      <div id="recurringNewInput">
+       <form id="createNewRD" method="post">
+        <input name="formName" type="hidden" value="CreateRecurringDeliveryRequest"/>
+        <input id="pageType" name="pageType" type="hidden" value="rdc"/>
+        <input name="itemType" type="hidden" value=""/>
+        <input name="product_number" type="hidden" value=""/>
+        <input name="variant_number" type="hidden" value=""/>
+        <input name="quantity" type="hidden" value=""/>
+        <script type="text/javascript">
+         var origFreqValue;
+
+	$(document).ready(function() {
+		// We're going to initally set focus to the Name field if:
+		//  1. It's displayed as a textbox.
+		//  2. PrePopulate = False.
+		// Note: This doesn't work when this UC is embedded in the CreateNewRD modal dialog box.
+		//       That use case is handled directly in CreateNewRD.ascx.
+		if ('False' !== 'True') {
+			$('input#rd_newName').focus();
+		}
+
+		origFreqValue = $('select#frequencySelection').val();
+	});
+
+
+	// Called when the user wants to edit the Name field.  It does the following:
+	//  - Hides the Name label
+	//  - Hides the Edit button that was just clicked
+	//  - Displays the textbox containing the name
+	//  - Displays the parent DIV of the Save & Cancel buttons
+	function InitiateNameEditMode() {
+		$('span#readOnlyName').hide();
+		$('input#editButton').hide();
+		$('input#rd_newName').show();
+		$('div#panelSaveCancel').show();
+	}
+
+
+	// Called when the values of the Frequency DDL or ShipDateSelector are changed.  It does the following:
+	//  - Checks whether the RequireConfirmation property is set to True.
+	//      If so then: Display the parent DIV of the Save & Cancel buttons
+	function InitiateEditMode() {
+		var requireConfirm = 'False';
+		if (requireConfirm == 'True') {
+			$('div#panelSaveCancel').show();
+		}
+	}
+
+
+	// Called when the user presses the Cancel button, after entering Edit mode.
+	// It does the following:
+	//  - Hides the parent DIV of the Save & Cancel buttons
+	//  - If the Name textbox is visible then:
+	//      - Hides the Name textbox, restoring the original Name value
+	//      - Displays the Name label
+	//      - Displays the Edit button
+	//  - Restores the original ShipDate
+	//  - Restores the original Frequency
+	function RestorePropertyValues() {
+		$('div#panelSaveCancel').hide();
+
+        // If the Edit Name textbox is visible then restore the original value
+		if ($('input#rd_newName').is(':visible')) {
+			$('input#rd_newName').val("");
+			$('input#rd_newName').hide();
+			$('span#readOnlyName').show();
+			$('input#editButton').show();
+		}
+
+		// If the Order Date textbox is visible then restore the original value
+		if ($("input[name='rd_shipDate']").is(':visible')) {
+			$('input#rd_shipDate').val("");
+		}
+
+		// If the Frequency DDL is visible and the value was changed then restore the original value
+		if ($('select#frequencySelection').is(':visible') && (origFreqValue !== $('select#frequencySelection').val())) {
+			$('select#frequencySelection option').prop("selected", false);
+			$('select#frequencySelection option[value=' + origFreqValue + ']').prop('selected', true)
+		}
+	}
+        </script>
+        <div>
+         <div id="editProperties">
+          <div class="create_name">
+           <div class="name">
+            Name Your Auto Delivery:
+           </div>
+           <div class="field">
+            <input id="rd_newName" name="rd_newName" placeholder="ex. Anna's Favorites" type="text" value=""/>
+           </div>
+          </div>
+          <div class="create_frequency">
+           <div class="name">
+            Ships Every:
+           </div>
+           <div class="field">
+            <script type="text/javascript">
+             // Event handler that is called when a change is made to the DDL.
+	function SaveFrequencySelection(selValue) {
+		if (selValue == "none") {
+			$('input#rd_interval').removeAttr('value');
+			$('input#rd_frequency').removeAttr('value');
+		}
+		else {
+			var freqAbbrev = selValue.substr(selValue.length - 1, 1);
+			var interval = selValue.substr(0, selValue.length - 1).trim();
+
+			$('input#rd_interval').val(interval);
+
+			var frequency;
+
+			switch (freqAbbrev.toLowerCase()) {
+//				case "d":
+//					frequency = "Daily";
+//					break;
+
+				case "w":
+					frequency = "Weekly";
+					break;
+
+				case "m":
+					frequency = "Monthly";
+					break;
+
+//				case "y":
+//					frequency = "Yearly";
+//					break;
+
+				default:
+					alert("Unknown frequency abbreviation: " + freqAbbrev);
+					break;
+			}
+
+			$('input#rd_frequency').val(frequency);
+
+			// If AutoPostBack is set then cause a postback to force the Interval & Frequency values to be updated immediately.
+			// Otherwise, call a client-side function in EditPropertiesRD to see if the Save & Cancel buttons should be displayed
+			var autoPostBack = 'False';
+
+			if (autoPostBack == 'True') {
+				$('#rdProperties').submit();
+			}
+			else {
+				InitiateEditMode();   // Call this function in EditPropertiesRD.  It'll perform a check to see if EditMode can be enabled in the current context.
+			}
+		}
+	}
+            </script>
+            <input id="rd_interval" name="rd_interval" type="hidden"/>
+            <input id="rd_frequency" name="rd_frequency" type="hidden"/>
+            <select id="frequencySelection" onchange="SaveFrequencySelection(this.value)">
+             <option value="none">
+              Choose
+             </option>
+             <option value="1w">
+              1 Week
+             </option>
+             <option value="2w">
+              2 Weeks
+             </option>
+             <option value="3w">
+              3 Weeks
+             </option>
+             <option value="4w">
+              4 Weeks
+             </option>
+             <option value="6w">
+              6 Weeks
+             </option>
+             <option value="1m">
+              1 Month
+             </option>
+             <option value="2m">
+              2 Months
+             </option>
+             <option value="3m">
+              3 Months
+             </option>
+             <option value="6m">
+              6 Months
+             </option>
+            </select>
+           </div>
+          </div>
+         </div>
+         <div id="panelSaveCancel" style="display:none">
+          <div class="button">
+           <button class="btn" id="saveButton" onclick="$('#rdProperties').submit()" type="button">
+            Save Changes
+           </button>
+          </div>
+          <div class="button">
+           <button class="btn" id="cancelButton" onclick="RestorePropertyValues()" type="button">
+            Cancel
+           </button>
+          </div>
+         </div>
+        </div>
+        <div class="create_delivery_button">
+         <button class="remodal-confirm" data-remodal-action="confirm" id="createNew" name="createNew">
+          Create Auto Delivery
+         </button>
+        </div>
+        <div class="edit_link">
+         <a class="crossdomainlink" href="javascript:void(0);" onclick="RedirectToManageRD()">
+          Edit an Existing Auto Delivery Order ▶
+         </a>
+        </div>
+       </form>
+      </div>
+     </div>
+    </div>
+    <div id="createNewRDPleaseWait" style="position:absolute; left:480px; top:470px; display:none">
+     <img src="/img/pleaseWait.gif"/>
+    </div>
+    <div id="warning_panel">
+     <div class="remodal" data-remodal-id="newAutoDeliveryCongratulations" data-remodal-options="closeOnOutsideClick:false">
+      <div class="modalHeader">
+       Congratulations, you have started:
+       <strong>
+       </strong>
+      </div>
+      <div>
+       This item has been added to your cart as part of your new Auto Delivery.
+      </div>
+      <div id="initial_buttons">
+       <div class="button_row">
+        <div class="button">
+         <a class="btn" href="http://shop.numitea.com/category.aspx?c=NumiTeaStore@ByType">
+          Continue Shopping
+         </a>
+        </div>
+        <div class="button">
+         <a class="btn" href="/Cart.aspx">
+          View Cart
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="remodal" data-remodal-id="autoDeliveryConfirmationAddition" data-remodal-options="closeOnOutsideClick:false">
+     You successfully added this item to your confirmed Auto Delivery order!
+     <div style="margin-top:20px">
+      <button class="remodal-confirm" data-remodal-action="confirm">
+       OK
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <footer id="footer">
+   <div class="footer_top">
+   </div>
+   <nav class="link-line">
+    <ul>
+     <li>
+      <a href="http://www.numitea.com/">
+       Home
+      </a>
+     </li>
+     <li>
+      <a href="/products/">
+       Products
+      </a>
+     </li>
+     <li>
+      <a href="http://www.numitea.com/quality/">
+       Our Difference
+      </a>
+     </li>
+     <li>
+      <a href="http://blog.numitea.com/">
+       Tea Garden
+      </a>
+     </li>
+     <li>
+      <a href="http://www.numitea.com/impact/">
+       Impact
+      </a>
+     </li>
+     <li>
+      <a href="http://www.numitea.com/about/">
+       Our Story
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <nav class="link-line">
+    <ul>
+     <li>
+      <a href="https://shop.numitea.com/">
+       Shop Now
+      </a>
+     </li>
+     <li>
+      <a href="http://www.numitea.com/contact-us/">
+       Contact Us
+      </a>
+     </li>
+     <li>
+      <a href="http://www.numitea.com/faq/">
+       FAQ
+      </a>
+     </li>
+     <li>
+      <a href="http://wholesale.numitea.com/">
+       Wholesale
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <nav class="link-line">
+    <ul>
+     <li>
+      <a href="/RecurringDelivery/Benefits.aspx">
+       Auto Delivery
+      </a>
+     </li>
+     <li>
+      <a href="/Policies/HowToOrder.aspx">
+       How To Order
+      </a>
+     </li>
+     <li>
+      <a href="/Policies/SatisfactionGuarantee.aspx">
+       Satisfaction Guarantee
+      </a>
+     </li>
+     <li>
+      <a href="/Policies/ShippingInformation.aspx">
+       Shipping Information
+      </a>
+     </li>
+     <li>
+      <a href="/Policies/PrivacyPolicy.aspx">
+       Privacy Policy
+      </a>
+     </li>
+     <li class="last">
+      <a href="/Policies/Help.aspx">
+       Help
+      </a>
+     </li>
+     <li>
+      <a class="footer-mobile" href="/Tea-by-Type/c/NumiTeaStore@ByType?displayType=Mobile">
+       View Mobile Site
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <nav class="social-group">
+    <a class="social" href="https://www.facebook.com/numitea" target="_blank">
+     <span class="icon-facebook">
+     </span>
+    </a>
+    <a class="social" href="https://twitter.com/NumiTea" target="_blank">
+     <span class="icon-twitter">
+     </span>
+    </a>
+    <a class="social" href="https://www.instagram.com/numiorganictea/" target="_blank">
+     <span class="icon-instagram">
+     </span>
+    </a>
+    <a class="social" href="https://www.pinterest.com/numitea/" target="_blank">
+     <span class="icon-pinterest">
+     </span>
+    </a>
+    <a class="social" href="http://blog.numitea.com/" target="_blank">
+     <span class="icon-tealeaf">
+     </span>
+    </a>
+   </nav>
+   <div class="copyright">
+    ©2005-2017 Numi, Inc. &amp; WorldPantry.com®, Inc. - All Rights Reserved
+   </div>
+  </footer>
+  <!-- AdRoll Start -->
+  <script type="text/javascript">
+   adroll_adv_id = "3ISYXM72MNEQZEFOU2G3Z3";
+			adroll_pix_id = "DPJSTZZOW5DSBD2X6APJQQ";
+			(function() {
+				var _onload = function() {
+					if (document.readyState && !/loaded|complete/.test(document.readyState)) { setTimeout(_onload, 10); return }
+					if (!window.__adroll_loaded) { __adroll_loaded = true; setTimeout(_onload, 50); return }
+					var scr = document.createElement("script");
+					var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+					scr.setAttribute('async', 'true');
+					scr.type = "text/javascript";
+					scr.src = host + "/j/roundtrip.js";
+					((document.getElementsByTagName('head') || [null])[0] ||
+						document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+				};
+				if (window.addEventListener) { window.addEventListener('load', _onload, false); }
+				else { window.attachEvent('onload', _onload) }
+			} ());
+  </script>
+  <!-- AdRoll End -->
+  <!-- Facebook Pixel Code -->
+  <script type="text/javascript">
+   !function(f, b, e, v, n, t, s) {
+				if (f.fbq) return; n = f.fbq = function() {
+					n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+				}; if (!f._fbq) f._fbq = n;
+				n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+				t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+			} (window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '1032736733450069'); // Insert your pixel ID here.
+			fbq('track', 'PageView');
+  </script>
+  <noscript>
+   <img alt="" height="1" src="https://www.facebook.com/tr?id=1032736733450069&amp;ev=PageView&amp;noscript=1" style="display: none" width="1"/>
+  </noscript>
+  <!-- DO NOT MODIFY -->
+  <!-- End Facebook Pixel Code -->
+  <!-- Twitter Pixel Code Start -->
+  <noscript>
+   <img alt="" height="1" src="https://analytics.twitter.com/i/adsct?txn_id=ntryi&amp;p_id=Twitter&amp;tw_sale_amount=0&amp;tw_order_quantity=0" style="display: none;" width="1"/>
+   <img alt="" height="1" src="//t.co/i/adsct?txn_id=ntryi&amp;p_id=Twitter&amp;tw_sale_amount=0&amp;tw_order_quantity=0" style="display: none;" width="1"/>
+  </noscript>
+  <script src="//platform.twitter.com/oct.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   twttr.conversion.trackPid('ntryi', { tw_sale_amount: 0, tw_order_quantity: 0 });
+  </script>
+  <!-- Twitter Pixel Code End -->
+  <!-- Abandoned Cart Start -->
+  <!-- Abandoned Cart End -->
+  <script type="text/javascript">
+   /*<![CDATA[*/
+	window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var e=this.createElement("script");n&&(this.domain=n),e.id="js-iframe-async",e.src="https://assets.zendesk.com/embeddable_framework/main.js",this.t=+new Date,this.zendeskHost="worldpantry.zendesk.com",this.zEQueue=a,this.body.appendChild(e)},o.write('<body onload="document._l();">'),o.close()}();
+	/*]]>*/
+  </script>
+ </body>
+</html>
