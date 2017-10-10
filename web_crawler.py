@@ -1,9 +1,10 @@
 #
-# A synchronous web crawler, uses breadth-first search
+# An asynchronous web crawler, uses breadth-first search recursively
+# Also, it doesn't work yet
 # Author: Emily Quinn Finney
 #
-# Fixes:
-# Make it asynchronous!
+# TODO: Change the recursive event loop stuff 'cuz it doesn't work
+# TODO: Rewrite the web crawler tests
 #
 
 import aiohttp
@@ -70,7 +71,7 @@ class PageScraper:
 
         else:
             # we want to discover new URLs on each page
-            self.url_list = self.respond_to_page(undiscovered)
+            self.respond_to_page(undiscovered)
 
             # recurse to the next layer, looking at only undiscovered links
             undiscovered = (self.url_list - self.master_list)
@@ -86,7 +87,7 @@ class PageScraper:
         :return:
         """
         # initializing loop and list of futures
-        loop = asyncio.get_event_loop()
+        new_loop = asyncio.get_event_loop()
         futures = list()
 
         # adding all the matching futures to the list
@@ -100,13 +101,13 @@ class PageScraper:
                 futures.append(future_link)
 
         # handle the futures asynchronously
-        loop.run_until_complete(asyncio.gather(*futures))
+        new_loop.run_until_complete(asyncio.gather(*futures))
 
         # get the results from the futures
         for future in futures:
             self.url_list.update(future.result())
 
-        loop.close()
+        new_loop.close()
 
     async def open_page(self, url, write=True, inspect=False):
         """
