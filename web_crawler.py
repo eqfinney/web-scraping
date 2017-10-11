@@ -3,8 +3,8 @@
 # Also, it doesn't work yet
 # Author: Emily Quinn Finney
 #
-# TODO: Change the recursive event loop stuff 'cuz it doesn't work
 # TODO: Rewrite the web crawler tests
+# TODO: Add a semaphore or other throttling mechanism
 #
 
 import aiohttp
@@ -27,7 +27,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 class PageScraper:
 
-    def __init__(self, url, sequence, id_sequence, filename):
+    def __init__(self, url, sequence, id_sequence, filename, event_loop, session):
         """
         Initializes the PageScraper class.
         :param url: the base URL from which to scrape, string
@@ -39,10 +39,13 @@ class PageScraper:
         self.sequence = sequence
         self.id_sequence = id_sequence
         self.filename = filename
+        self.event_loop = event_loop
+        self.session = session
         # keeps track of all IDs that have been seen so far
         self.master_list = set()
         # keeps track of all URLs that have been seen so far, per level
         self.url_list = set()
+
 
     async def scrape_page(self):
         """
@@ -54,10 +57,12 @@ class PageScraper:
         # find urls in layer 0
         first_url = self.url
         undiscovered = await self.locate_linked_pages(first_url)
-        # all urls that haven't yet been seen, which should be everything
-        self.master_list.update(self.scrape_layer(undiscovered))
+        # handle the futures asynchronously
+        # gets all urls that haven't yet been seen, which should be everything
+        all_urls = await self.scrape_layer(undiscovered)
+        self.master_list.update(all_urls)
 
-    def scrape_layer(self, undiscovered):
+    async def scrape_layer(self, undiscovered):
         """
         Examines each of the pages matching a given sequence on a layer, writing the results to a text file.
         :param undiscovered: the URLs that have not yet been searched
@@ -71,43 +76,31 @@ class PageScraper:
 
         else:
             # we want to discover new URLs on each page
-            self.respond_to_page(undiscovered)
+            linked_pages = set()
+            for link in undiscovered:
+                id_number = find_id(link, self.id_sequence)
+                if not identify_duplicates(link, self.master_list, self.id_sequence):
+                    self.master_list.add(id_number)
+                    print(id_number)
+                    linked_pages = await self.locate_linked_pages(link)
+
+            self.url_list.update(linked_pages)
 
             # recurse to the next layer, looking at only undiscovered links
             undiscovered = (self.url_list - self.master_list)
-            self.master_list.update(self.scrape_layer(undiscovered))
+            print('undiscovered: ', undiscovered)
+            # it never gets below here. That's the problem.
+            import ipdb; ipdb.set_trace()
+            # define a set of recursive tasks, but do not yet complete them
+            tasks = [ self.scrape_layer(undiscovered) ]
+
+            # gather the tasks and run the recursion asynchronously
+            # as you do, update the master list with findings
+            # TODO: the master list is currently not getting updated
+            #       so it never hits the base case
+            self.master_list.update(await asyncio.gather(*tasks))
 
             return self.master_list
-
-    def respond_to_page(self, urls_to_investigate):
-        """
-        This is the thing that needs to be made asynchronous!!!
-        Determines if URLs have been investigated, and finds all relevant URLs on each page.
-        :param urls_to_investigate: a list of all URLs that need to be investigated
-        :return:
-        """
-        # initializing loop and list of futures
-        new_loop = asyncio.get_event_loop()
-        futures = list()
-
-        # adding all the matching futures to the list
-        for link in urls_to_investigate:
-            id_number = find_id(link, self.id_sequence)
-            if not identify_duplicates(link, self.master_list, self.id_sequence):
-                self.master_list.add(id_number)
-                print(link)
-                # create a future
-                future_link = asyncio.ensure_future(self.locate_linked_pages(link))
-                futures.append(future_link)
-
-        # handle the futures asynchronously
-        new_loop.run_until_complete(asyncio.gather(*futures))
-
-        # get the results from the futures
-        for future in futures:
-            self.url_list.update(future.result())
-
-        new_loop.close()
 
     async def open_page(self, url, write=True, inspect=False):
         """
@@ -117,7 +110,7 @@ class PageScraper:
         :param inspect: boolean, determines whether or not to print the prettified nested HTML page
         :return: structured_page, the BeautifulSoup object
         """
-        page = await fetch(url)
+        page = await fetch(url, self.session)
         structured_page = BeautifulSoup(page, 'lxml')
         page_string = structured_page.prettify()
         if inspect:
@@ -151,9 +144,9 @@ class PageScraper:
         return set_of_links
 
 
-async def fetch(url):
+async def fetch(url, session):
     with async_timeout.timeout(10):
-        async with aiohttp.ClientSession().get(url) as response:
+        async with session.get(url) as response:
             return await response.text()
 
 
@@ -193,8 +186,14 @@ def identify_duplicates(url, master_list, id_sequence):
 
 
 if __name__ == '__main__':
-    NumiTeaScraper = PageScraper('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
-                                 'c=NumiTeaStore@ByType', 'NUMIS-[0-9]*', 'new_tea_corpus.txt')
+
+    #initializing loop
     loop = asyncio.get_event_loop()
-    loop.run_until_complete(NumiTeaScraper.scrape_page())
+
+    with aiohttp.ClientSession(loop=loop) as session:
+        NumiTeaScraper = PageScraper('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
+                                     'c=NumiTeaStore@ByType', 'NUMIS-[0-9]*', 'new_tea_corpus.txt',
+                                     loop, session)
+        loop.run_until_complete(NumiTeaScraper.scrape_page())
+
     loop.close()
