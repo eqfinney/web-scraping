@@ -71,7 +71,7 @@ class PageScraper:
         print('we have', len(undiscovered), 'objects!')
 
         # return master list if undiscovered is empty
-        if not undiscovered:
+        if len(undiscovered) == 0:
             return self.master_list
 
         else:
@@ -81,24 +81,22 @@ class PageScraper:
                 id_number = find_id(link, self.id_sequence)
                 if not identify_duplicates(link, self.master_list, self.id_sequence):
                     self.master_list.add(id_number)
-                    print(id_number)
+                    #print(id_number)
                     linked_pages = await self.locate_linked_pages(link)
 
             self.url_list.update(linked_pages)
 
             # recurse to the next layer, looking at only undiscovered links
-            undiscovered = (self.url_list - self.master_list)
+            # make sure the links aren't duplicates before labelling them undiscovered
+            undiscovered = { x for x in self.url_list if not identify_duplicates(x, self.master_list, self.id_sequence) }
             print('undiscovered: ', undiscovered)
-            # it never gets below here. That's the problem.
-            import ipdb; ipdb.set_trace()
-            # define a set of recursive tasks, but do not yet complete them
-            tasks = [ self.scrape_layer(undiscovered) ]
-
-            # gather the tasks and run the recursion asynchronously
-            # as you do, update the master list with findings
-            # TODO: the master list is currently not getting updated
-            #       so it never hits the base case
-            self.master_list.update(await asyncio.gather(*tasks))
+            #import ipdb; ipdb.set_trace()
+            if len(undiscovered) > 0:
+                # define a set of recursive tasks, but do not yet complete them
+                tasks = [ self.scrape_layer(undiscovered) ]
+                # gather the tasks and run the recursion asynchronously
+                # as you do, update the master list with findings
+                self.master_list.update(await asyncio.gather(*tasks))
 
             return self.master_list
 
