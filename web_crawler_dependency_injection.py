@@ -26,7 +26,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 class PageScraper:
 
-    def __init__(self, url, sequence, id_sequence, filename, session):
+    def __init__(self, url, sequence, id_sequence, page_loader, filename=None):
         """
         Initializes the PageScraper class.
         :param sequence: the sequence to which all URLs must be matched if they are to be scraped, string
@@ -37,7 +37,7 @@ class PageScraper:
         self.sequence = sequence
         self.id_sequence = id_sequence
         self.filename = filename
-        self.session = session
+        self.page_loader = page_loader
         # keeps track of all IDs that have been seen so far
         self.master_list = set()
         # keeps track of all URLs that have been seen so far, per level
@@ -51,15 +51,14 @@ class PageScraper:
         """
 
         # find urls in layer 0
-        WebLoader = URLoader(self.url, self.session)
-        first_page = await WebLoader.open_page()
+        first_page = await self.page_loader.open_page()
         undiscovered = locate_linked_pages(first_page, self.sequence, self.url)
         # handle the futures asynchronously
         # gets all urls that haven't yet been seen, which should be everything
         all_urls = await self.scrape_layer(undiscovered)
         self.master_list.update(all_urls)
 
-    async def scrape_layer(self, undiscovered):
+    async def scrape_layer(self, undiscovered, recursive=True):
         """
         Examines each of the pages matching a given sequence on a layer, writing the results to a text file.
         :param undiscovered: the URLs that have not yet been searched
@@ -68,36 +67,43 @@ class PageScraper:
         print('we have', len(undiscovered), 'objects!')
 
         # return master list if undiscovered is empty
-        if len(undiscovered) == 0:
-            return self.master_list
-
-        else:
+        if len(undiscovered) > 0:
             # we want to discover new URLs on each page
             linked_pages = set()
             for link in undiscovered:
                 id_number = find_id(link, self.id_sequence)
                 if not identify_duplicates(link, self.master_list, self.id_sequence):
                     self.master_list.add(id_number)
-                    PageLoader = URLoader(link, self.session)
-                    structured_page = await PageLoader.open_page()
-                    write_page_to_file(structured_page, self.filename)
+                    self.page_loader.url = link
+                    structured_page = await self.page_loader.open_page()
+                    if self.filename:
+                        write_page_to_file(structured_page, self.filename)
                     linked_pages = locate_linked_pages(structured_page, self.sequence, self.url)
 
             self.url_list.update(linked_pages)
 
-            # recurse to the next layer, looking at only undiscovered links
-            # make sure the links aren't duplicates before labelling them undiscovered
-            undiscovered = { x for x in self.url_list if not identify_duplicates(x, self.master_list, self.id_sequence) }
-            print('undiscovered: ', undiscovered)
-            #import ipdb; ipdb.set_trace()
-            if len(undiscovered) > 0:
-                # define a set of recursive tasks, but do not yet complete them
-                tasks = [ self.scrape_layer(undiscovered) ]
-                # gather the tasks and run the recursion asynchronously
-                # as you do, update the master list with findings
-                self.master_list.update(await asyncio.gather(*tasks))
+            if recursive:
+                await self.recurse_layer()
 
-            return self.master_list
+        return self.master_list
+
+    async def recurse_layer(self):
+        """
+        Implements recursion in lower layers, looking only at undiscovered links
+        :param undiscovered: the URLs that have not yet been searched
+        :return:
+        """
+        # make sure the links aren't duplicates before labelling them undiscovered
+        undiscovered = { x for x in self.url_list
+                         if not identify_duplicates(x, self.master_list, self.id_sequence) }
+        print('undiscovered: ', undiscovered)
+        #import ipdb; ipdb.set_trace()
+        if len(undiscovered) > 0:
+            # define a set of recursive tasks, but do not yet complete them
+            tasks = [ self.scrape_layer(undiscovered) ]
+            # gather the tasks and run the recursion asynchronously
+            # as you do, update the master list with findings
+            self.master_list.update(await asyncio.gather(*tasks))
 
 
 class URLoader:
@@ -196,13 +202,12 @@ def write_page_to_file(structured_page, filename, inspect=False):
 
 if __name__ == '__main__':
 
-    #initializing loop
     loop = asyncio.get_event_loop()
 
     with aiohttp.ClientSession(loop=loop) as client_session:
+        TeaLoader = URLoader('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType', client_session)
         NumiTeaScraper = PageScraper('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
-                                     'c=NumiTeaStore@ByType', 'NUMIS-[0-9]*', 'new_tea_corpus.txt',
-                                     client_session)
+                                     'c=NumiTeaStore@ByType', 'NUMIS-[0-9]*', TeaLoader, 'new_tea_corpus.html')
         loop.run_until_complete(NumiTeaScraper.scrape_page())
 
     loop.close()
