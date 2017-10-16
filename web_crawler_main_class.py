@@ -31,7 +31,6 @@ class PageScraper:
         Initializes the PageScraper class.
         :param sequence: the sequence to which all URLs must be matched if they are to be scraped, string
         :param id_sequence: the sequence used to identify a product ID, string regex
-        :param filename: the filename into which to scrape the website information, string
         """
         self.url = url
         self.sequence = sequence
@@ -39,67 +38,36 @@ class PageScraper:
         # keeps track of all IDs that have been seen so far
         self.master_list = set()
         # keeps track of all URLs that have been seen so far, per level
-        self.url_list = set()
+        self.queue = [url]
 
-    async def scrape_page(self, page):
+    def locate_linked_pages(self, structured_page):
         """
-        Scrapes a page and all underlying page whose titles match a certain sequence, writing
-        the text results into a text file.
-        :return: set_of_links, a set of the pages successfully scraped
+        Given a page structured in a Beautiful Soup format, returns all the pages linked
+        that contain a given sequence of characters in their URLs.
+        :param structured_page: a page structured in Beautiful Soup format
+        :return: linked_pages, a list of strings containing linked URLs
         """
+        all_links = structured_page.find_all('a')
+        for link in all_links:
+            address = str(link.get('href'))
+            if self.sequence in address:
+                if not urlparse(address).netloc:
+                    scheme = urlparse(self.url).scheme
+                    base_url = urlparse(self.url).netloc
+                    address = ''.join([scheme, '://', base_url, address])
+                self.queue.append(address)
 
-        # find urls in layer 0
-        undiscovered = locate_linked_pages(first_page, self.sequence, self.url)
-        # handle the futures asynchronously
-        # gets all urls that haven't yet been seen, which should be everything
-        all_urls = await self.scrape_layer(undiscovered)
-        self.master_list.update(all_urls)
+        return self.queue
 
-    async def scrape_layer(self, undiscovered, recursive=True):
-        """
-        Examines each of the pages matching a given sequence on a layer, writing the results to a text file.
-        :param undiscovered: the URLs that have not yet been searched
-        :return:
-        """
-        print('we have', len(undiscovered), 'objects!')
+    def add_link_to_master(self, link):
 
-        # return master list if undiscovered is empty
-        if len(undiscovered) > 0:
-            # we want to discover new URLs on each page
-            linked_pages = set()
-            for link in undiscovered:
-                id_number = find_id(link, self.id_sequence)
-                if not identify_duplicates(link, self.master_list, self.id_sequence):
-                    self.master_list.add(id_number)
-                    #TODO: make eliminate page_loader and make this totally independent
-                    self.page_loader.url = link
-                    structured_page = await self.page_loader.open_page()
-                    linked_pages = locate_linked_pages(structured_page, self.sequence, self.url)
+        id_number = find_id(link, self.id_sequence)
+        if not identify_duplicates(link, self.master_list, self.id_sequence):
+            print(id_number)
+            self.master_list.add(id_number)
+            return True
 
-            self.url_list.update(linked_pages)
-
-            if recursive:
-                await self.recurse_layer()
-
-        return self.master_list
-
-    async def recurse_layer(self):
-        """
-        Implements recursion in lower layers, looking only at undiscovered links
-        :param undiscovered: the URLs that have not yet been searched
-        :return:
-        """
-        # make sure the links aren't duplicates before labelling them undiscovered
-        undiscovered = { x for x in self.url_list
-                         if not identify_duplicates(x, self.master_list, self.id_sequence) }
-        print('undiscovered: ', undiscovered)
-        #import ipdb; ipdb.set_trace()
-        if len(undiscovered) > 0:
-            # define a set of recursive tasks, but do not yet complete them
-            tasks = [ self.scrape_layer(undiscovered) ]
-            # gather the tasks and run the recursion asynchronously
-            # as you do, update the master list with findings
-            self.master_list.update(await asyncio.gather(*tasks))
+        return False
 
 
 class URLoader:
@@ -121,29 +89,6 @@ class URLoader:
         page = await self.fetch()
         structured_page = BeautifulSoup(page, 'lxml')
         return structured_page
-
-
-def locate_linked_pages(structured_page, sequence, url):
-    """
-    Given a page structured in a Beautiful Soup format, returns all the pages linked
-    that contain a given sequence of characters in their URLs.
-    :param structured_page: a page structured in Beautiful Soup format
-    :param sequence: the sequence to which to match to return a link
-    :param url: the base url from which to scrape, string
-    :return: linked_pages, a list of strings containing linked URLs
-    """
-    all_links = structured_page.find_all('a')
-    set_of_links = set()
-    for link in all_links:
-        address = str(link.get('href'))
-        if sequence in address:
-            if not urlparse(address).netloc:
-                scheme = urlparse(url).scheme
-                base_url = urlparse(url).netloc
-                address = ''.join([scheme, '://', base_url, address])
-            set_of_links.add(address)
-
-    return set_of_links
 
 
 def find_id(url, id_sequence):
@@ -196,6 +141,33 @@ def write_page_to_file(structured_page, filename, inspect=False):
         f.write(page_string)
 
 
+async def main(url_loader, page_scraper, filename):
+    """
+    Recursively loads and scrapes pages based on
+    :param url_loader: the object that loads URLs given to it
+    :param page_scraper: the object that scrapes HTML from a given web page
+    :param filename: the name of the file into which to write the HTML, string
+    :return:
+    """
+    print(page_scraper.queue)
+    undiscovered = [ x for x in page_scraper.queue
+                         if not identify_duplicates(x, page_scraper.master_list, page_scraper.id_sequence) ]
+
+    # TODO: This doesn't work! Time to learn more about asyncio :D
+    for link in undiscovered:
+        if page_scraper.add_link_to_master(url_loader.url):
+            url_loader.url = link
+            result = await url_loader.open_page()
+            write_page_to_file(result, filename)
+            # gets all urls that haven't yet been seen
+            page_scraper.locate_linked_pages(result)
+
+    # gather the tasks and run the recursion asynchronously
+    tasks = [ main(url_loader, page_scraper, filename) ]
+    # then update the master list with findings
+    await asyncio.gather(*tasks)
+
+
 if __name__ == '__main__':
 
     loop = asyncio.get_event_loop()
@@ -206,12 +178,6 @@ if __name__ == '__main__':
         NumiTeaScraper = PageScraper('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
                                      'c=NumiTeaStore@ByType', 'NUMIS-[0-9]*')
 
-        while len(NumiTeaScraper.undiscovered) > 0:
-            NumiTeaScraper.scrape_page(result)
-            next_link = NumiTeaScraper.undiscovered[0]
-            result = TeaLoader.open_page(next_link, client_session)
-            write_page_to_file(result, 'new_tea_corpus.html')
-
-        loop.run_until_complete(NumiTeaScraper.scrape_page())
+        loop.run_until_complete(main(TeaLoader, NumiTeaScraper, 'new_tea_corpus.html'))
 
     loop.close()
