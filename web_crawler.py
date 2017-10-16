@@ -4,7 +4,6 @@
 # Author: Emily Quinn Finney
 #
 # TODO: Rewrite the web crawler tests
-# TODO: Add a semaphore or other throttling mechanism
 #
 
 import aiohttp
@@ -27,10 +26,9 @@ logging.basicConfig(level=logging.DEBUG)
 
 class PageScraper:
 
-    def __init__(self, url, sequence, id_sequence, filename, event_loop, session):
+    def __init__(self, url, sequence, id_sequence, filename, session):
         """
         Initializes the PageScraper class.
-        :param url: the base URL from which to scrape, string
         :param sequence: the sequence to which all URLs must be matched if they are to be scraped, string
         :param id_sequence: the sequence used to identify a product ID, string regex
         :param filename: the filename into which to scrape the website information, string
@@ -39,13 +37,11 @@ class PageScraper:
         self.sequence = sequence
         self.id_sequence = id_sequence
         self.filename = filename
-        self.event_loop = event_loop
         self.session = session
         # keeps track of all IDs that have been seen so far
         self.master_list = set()
         # keeps track of all URLs that have been seen so far, per level
         self.url_list = set()
-
 
     async def scrape_page(self):
         """
@@ -55,8 +51,9 @@ class PageScraper:
         """
 
         # find urls in layer 0
-        first_url = self.url
-        undiscovered = await self.locate_linked_pages(first_url)
+        WebLoader = URLoader(self.url, self.session)
+        first_page = await WebLoader.open_page()
+        undiscovered = locate_linked_pages(first_page, self.sequence, self.url)
         # handle the futures asynchronously
         # gets all urls that haven't yet been seen, which should be everything
         all_urls = await self.scrape_layer(undiscovered)
@@ -81,8 +78,10 @@ class PageScraper:
                 id_number = find_id(link, self.id_sequence)
                 if not identify_duplicates(link, self.master_list, self.id_sequence):
                     self.master_list.add(id_number)
-                    #print(id_number)
-                    linked_pages = await self.locate_linked_pages(link)
+                    PageLoader = URLoader(link, self.session)
+                    structured_page = await PageLoader.open_page()
+                    write_page_to_file(structured_page, self.filename)
+                    linked_pages = locate_linked_pages(structured_page, self.sequence, self.url)
 
             self.url_list.update(linked_pages)
 
@@ -100,52 +99,49 @@ class PageScraper:
 
             return self.master_list
 
-    async def open_page(self, url, write=True, inspect=False):
+
+class URLoader:
+
+    def __init__(self, url, session):
+        self.url = url
+        self.session = session
+
+    async def fetch(self):
+        with async_timeout.timeout(10):
+            async with self.session.get(self.url) as response:
+                return await response.text()
+
+    async def open_page(self):
         """
         Opens a web page using the urllib.request library, and returns a Beautiful Soup object
-        :param url: string, the URL of the web page of interest.
-        :param write: boolean, determines whether or not to write the prettified HTML page
-        :param inspect: boolean, determines whether or not to print the prettified nested HTML page
         :return: structured_page, the BeautifulSoup object
         """
-        page = await fetch(url, self.session)
+        page = await self.fetch()
         structured_page = BeautifulSoup(page, 'lxml')
-        page_string = structured_page.prettify()
-        if inspect:
-            print(page_string)
-        if write:
-            with open(self.filename, 'a') as f:
-                # this is a blocking function but it's not bad
-                # and we don't want to worry about writing multiple things to the same file at once
-                f.write(page_string)
         return structured_page
 
-    async def locate_linked_pages(self, url):
-        """
-        Given a page structured in a Beautiful Soup format, returns all the pages linked
-        that contain a given sequence of characters in their URLs.
-        :param url: a url for a web page, string
-        :return: linked_pages, a list of strings containing linked URLs
-        """
-        structured_page = await self.open_page(url)
-        all_links = structured_page.find_all('a')
-        set_of_links = set()
-        for link in all_links:
-            address = str(link.get('href'))
-            if self.sequence in address:
-                if not urlparse(address).netloc:
-                    scheme = urlparse(url).scheme
-                    base_url = urlparse(url).netloc
-                    address = ''.join([scheme, '://', base_url, address])
-                set_of_links.add(address)
 
-        return set_of_links
+def locate_linked_pages(structured_page, sequence, url):
+    """
+    Given a page structured in a Beautiful Soup format, returns all the pages linked
+    that contain a given sequence of characters in their URLs.
+    :param structured_page: a page structured in Beautiful Soup format
+    :param sequence: the sequence to which to match to return a link
+    :param url: the base url from which to scrape, string
+    :return: linked_pages, a list of strings containing linked URLs
+    """
+    all_links = structured_page.find_all('a')
+    set_of_links = set()
+    for link in all_links:
+        address = str(link.get('href'))
+        if sequence in address:
+            if not urlparse(address).netloc:
+                scheme = urlparse(url).scheme
+                base_url = urlparse(url).netloc
+                address = ''.join([scheme, '://', base_url, address])
+            set_of_links.add(address)
 
-
-async def fetch(url, session):
-    with async_timeout.timeout(10):
-        async with session.get(url) as response:
-            return await response.text()
+    return set_of_links
 
 
 def find_id(url, id_sequence):
@@ -183,15 +179,30 @@ def identify_duplicates(url, master_list, id_sequence):
         return True
 
 
+def write_page_to_file(structured_page, filename, inspect=False):
+    """
+    Writes a page to file.
+    :param structured_page: a page structured in Beautiful Soup format
+    :param filename: the name of a file into which to write the HTML
+    :param inspect: Boolean, a parameter indicating whether to print he page before writing
+    :return:
+    """
+    page_string = structured_page.prettify()
+    if inspect:
+        print(page_string)
+    with open(filename, 'a') as f:
+        f.write(page_string)
+
+
 if __name__ == '__main__':
 
     #initializing loop
     loop = asyncio.get_event_loop()
 
-    with aiohttp.ClientSession(loop=loop) as session:
+    with aiohttp.ClientSession(loop=loop) as client_session:
         NumiTeaScraper = PageScraper('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
                                      'c=NumiTeaStore@ByType', 'NUMIS-[0-9]*', 'new_tea_corpus.txt',
-                                     loop, session)
+                                     client_session)
         loop.run_until_complete(NumiTeaScraper.scrape_page())
 
     loop.close()
