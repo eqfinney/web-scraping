@@ -1,4 +1,7 @@
-# testing web crawler
+#
+# Testing asynchronous web crawler
+# Author: Emily Quinn Finney
+#
 
 import asyncio
 import BeautifulSoup

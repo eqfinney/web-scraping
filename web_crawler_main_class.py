@@ -1,6 +1,5 @@
 #
-# An asynchronous web crawler, uses breadth-first search recursively
-# Also, it doesn't work yet
+# An asynchronous web crawler, uses breadth-first search
 # Author: Emily Quinn Finney
 #
 

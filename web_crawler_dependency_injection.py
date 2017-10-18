@@ -39,71 +39,75 @@ class PageScraper:
         self.filename = filename
         self.page_loader = page_loader
         # keeps track of all IDs that have been seen so far
-        self.master_list = set()
+        self.master_set = set()
         # keeps track of all URLs that have been seen so far, per level
-        self.url_list = set()
+        self.queue = [url]
 
-    async def scrape_page(self):
+    def locate_linked_pages(self, structured_page):
         """
-        Scrapes a page and all underlying page whose titles match a certain sequence, writing
-        the text results into a text file.
-        :return: set_of_links, a set of the pages successfully scraped
+        Given a page structured in a Beautiful Soup format, returns all the pages linked
+        that contain a given sequence of characters in their URLs.
+        :param structured_page: a page structured in Beautiful Soup format
+        :return: linked_pages, a list of strings containing linked URLs
         """
+        all_links = structured_page.find_all('a')
+        for link in all_links:
+            address = str(link.get('href'))
+            if self.sequence in address:
+                if not urlparse(address).netloc:
+                    scheme = urlparse(self.url).scheme
+                    base_url = urlparse(self.url).netloc
+                    address = ''.join([scheme, '://', base_url, address])
+                self.queue.append(address)
 
-        # find urls in layer 0
-        first_page = await self.page_loader.open_page()
-        undiscovered = locate_linked_pages(first_page, self.sequence, self.url)
-        # handle the futures asynchronously
-        # gets all urls that haven't yet been seen, which should be everything
-        all_urls = await self.scrape_layer(undiscovered)
-        self.master_list.update(all_urls)
+        return self.queue
 
-    async def scrape_layer(self, undiscovered, recursive=True):
+    def add_link_to_master(self, link):
+
+        id_number = find_id(link, self.id_sequence)
+        if not identify_duplicates(link, self.master_set, self.id_sequence):
+            print(id_number)
+            self.master_set.add(id_number)
+            return True
+
+        return False
+
+    def find_undiscovered(self):
+        undiscovered = list()
+        for link in self.queue:
+            if not identify_duplicates(link, self.master_set, self.id_sequence):
+                undiscovered.append(link)
+
+        return undiscovered
+
+    async def update_queue(self, link):
         """
-        Examines each of the pages matching a given sequence on a layer, writing the results to a text file.
-        :param undiscovered: the URLs that have not yet been searched
+        Opens the URLoader and updates the queue with information retrieved
+        :param link: the URL with which to update the queue
         :return:
         """
-        print('we have', len(undiscovered), 'objects!')
+        self.add_link_to_master(link)
+        self.page_loader.url = link
+        result = await self.page_loader.open_page()
+        write_page_to_file(result, self.filename)
+        # gets all urls that haven't yet been seen
+        self.locate_linked_pages(result)
+        self.queue.remove(link)
 
-        # return master list if undiscovered is empty
-        if len(undiscovered) > 0:
-            # we want to discover new URLs on each page
-            linked_pages = set()
-            for link in undiscovered:
-                id_number = find_id(link, self.id_sequence)
-                if not identify_duplicates(link, self.master_list, self.id_sequence):
-                    self.master_list.add(id_number)
-                    self.page_loader.url = link
-                    structured_page = await self.page_loader.open_page()
-                    if self.filename:
-                        write_page_to_file(structured_page, self.filename)
-                    linked_pages = locate_linked_pages(structured_page, self.sequence, self.url)
-
-            self.url_list.update(linked_pages)
-
-            if recursive:
-                await self.recurse_layer()
-
-        return self.master_list
-
-    async def recurse_layer(self):
+    async def main(self):
         """
-        Implements recursion in lower layers, looking only at undiscovered links
-        :param undiscovered: the URLs that have not yet been searched
+        Loads and scrapes pages.
         :return:
         """
-        # make sure the links aren't duplicates before labelling them undiscovered
-        undiscovered = { x for x in self.url_list
-                         if not identify_duplicates(x, self.master_list, self.id_sequence) }
-        print('undiscovered: ', undiscovered)
-        #import ipdb; ipdb.set_trace()
-        if len(undiscovered) > 0:
-            # define a set of recursive tasks, but do not yet complete them
-            tasks = [ self.scrape_layer(undiscovered) ]
-            # gather the tasks and run the recursion asynchronously
-            # as you do, update the master list with findings
-            self.master_list.update(await asyncio.gather(*tasks))
+        await self.update_queue(self.page_loader.url)
+
+        while len(self.queue) > 0:
+            # get the first link in the queue, will be removed at the end of self.update_queue()
+            link = self.queue[0]
+            if not identify_duplicates(link, self.master_set, self.id_sequence):
+                await self.update_queue(link)
+            else:
+                self.queue.remove(link)
 
 
 class URLoader:
@@ -125,29 +129,6 @@ class URLoader:
         page = await self.fetch()
         structured_page = BeautifulSoup(page, 'lxml')
         return structured_page
-
-
-def locate_linked_pages(structured_page, sequence, url):
-    """
-    Given a page structured in a Beautiful Soup format, returns all the pages linked
-    that contain a given sequence of characters in their URLs.
-    :param structured_page: a page structured in Beautiful Soup format
-    :param sequence: the sequence to which to match to return a link
-    :param url: the base url from which to scrape, string
-    :return: linked_pages, a list of strings containing linked URLs
-    """
-    all_links = structured_page.find_all('a')
-    set_of_links = set()
-    for link in all_links:
-        address = str(link.get('href'))
-        if sequence in address:
-            if not urlparse(address).netloc:
-                scheme = urlparse(url).scheme
-                base_url = urlparse(url).netloc
-                address = ''.join([scheme, '://', base_url, address])
-            set_of_links.add(address)
-
-    return set_of_links
 
 
 def find_id(url, id_sequence):
@@ -208,6 +189,6 @@ if __name__ == '__main__':
         TeaLoader = URLoader('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType', client_session)
         NumiTeaScraper = PageScraper('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
                                      'c=NumiTeaStore@ByType', 'NUMIS-[0-9]*', TeaLoader, 'new_tea_corpus.html')
-        loop.run_until_complete(NumiTeaScraper.scrape_page())
+        loop.run_until_complete(NumiTeaScraper.main())
 
     loop.close()
