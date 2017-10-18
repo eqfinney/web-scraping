@@ -1,6 +1,6 @@
 
 import asyncio
-import BeautifulSoup
+from bs4 import BeautifulSoup
 import os
 import pytest
 import requests
@@ -32,7 +32,7 @@ class TestPageScraper(unittest.TestCase):
 
     def setUp(self):
         self.crawler = websclass.PageScraper('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
-                                             'c=NumiTeaStore@ByType', 'NUMIS-[0-9]*')
+                                             'NumiTeaStore@ByType', 'NUMIS-[0-9]*')
         page = requests.get(self.crawler.url)
         self.structured_page = BeautifulSoup(page, 'lxml')
 
@@ -43,11 +43,11 @@ class TestPageScraper(unittest.TestCase):
 
     def test_add_link_to_master(self,
                                 link='http://shop.numitea.com/Mate-Lemon/p/NUMIS-10250&c=NumiTeaStore@Teabag@Green'):
-        master_list_before = len(self.crawler.master_list)
+        master_set_before = len(self.crawler.master_set)
         result = self.crawler.add_link_to_master(link)
         assert result
-        master_list_after = len(self.crawler.master_list)
-        assert master_list_after == master_list_before + 1
+        master_set_after = len(self.crawler.master_set)
+        assert master_set_after == master_set_before + 1
 
     def test_find_undiscovered(self):
         pass
@@ -82,9 +82,9 @@ def test_find_id(url='http://shop.numitea.com/Mate-Lemon/p/NUMIS-10250&c=NumiTea
 
 
 def test_identify_duplicates(url='http://shop.numitea.com/Mate-Lemon/p/NUMIS-10250&c=NumiTeaStore@Teabag@Green',
-                             master_list=set(), id_sequence='NUMIS-[0-9]*'):
-    result = websclass.identify_duplicates(url, master_list, id_sequence)
+                             master_set=set(), id_sequence='NUMIS-[0-9]*'):
+    result = websclass.identify_duplicates(url, master_set, id_sequence)
     assert result
-    master_list.add('NUMIS-10250')
-    next_result = websclass.identify_duplicates(url, master_list, id_sequence)
+    master_set.add('NUMIS-10250')
+    next_result = websclass.identify_duplicates(url, master_set, id_sequence)
     assert not next_result

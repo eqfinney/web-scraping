@@ -3,8 +3,7 @@
 # Author: Emily Quinn Finney
 #
 
-import asyncio
-import BeautifulSoup
+from bs4 import BeautifulSoup
 import os
 import pytest
 import requests
@@ -12,33 +11,34 @@ import unittest
 import web_crawler_main_class as websclass
 
 
-class TestURLoader(unittest.TestCase):
+# TODO: figure out what's up with pytest-asyncio event_loop fixture
+@pytest.fixture
+@pytest.mark.asyncio
+def loader(event_loop):
+    import aiohttp
+    with aiohttp.ClientSession(loop=event_loop) as client_session:
+        # initialize the objects
+        return websclass.URLoader('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType', client_session)
 
-    @pytest.mark.asyncio
-    def setUp(self):
-        import aiohttp
-        with aiohttp.ClientSession(loop=event_loop) as client_session:
-            # initialize the objects
-            self.loader = websclass.URLoader('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
-                                             client_session)
 
-    @pytest.mark.asyncio
-    async def test_fetch(self):
-        response = await self.loader.fetch()
-        print(response.text)
+@pytest.mark.asyncio
+async def test_fetch(loader):
+    response = await loader.fetch()
+    print(response.text)
 
-    @pytest.mark.asyncio
-    async def test_open_page(self):
-        structured_page = await self.loader.open_page()
-        print(structured_page)
+
+@pytest.mark.asyncio
+async def test_open_page(loader):
+    structured_page = await loader.open_page()
+    print(structured_page)
 
 
 class TestPageScraper(unittest.TestCase):
 
     def setUp(self):
         self.crawler = websclass.PageScraper('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
-                                             'c=NumiTeaStore@ByType', 'NUMIS-[0-9]*')
-        page = requests.get(self.crawler.url)
+                                             'NumiTeaStore@ByType', 'NUMIS-[0-9]*')
+        page = requests.get(self.crawler.url).text
         self.structured_page = BeautifulSoup(page, 'lxml')
 
     def test_locate_linked_pages(self):
@@ -48,10 +48,10 @@ class TestPageScraper(unittest.TestCase):
 
     def test_add_link_to_master(self,
                                 link='http://shop.numitea.com/Mate-Lemon/p/NUMIS-10250&c=NumiTeaStore@Teabag@Green'):
-        master_list_before = len(self.crawler.master_list)
+        master_list_before = len(self.crawler.master_set)
         result = self.crawler.add_link_to_master(link)
         assert result
-        master_list_after = len(self.crawler.master_list)
+        master_list_after = len(self.crawler.master_set)
         assert master_list_after == master_list_before + 1
 
 
@@ -59,7 +59,7 @@ class TestWritePage(unittest.TestCase):
 
     def setUp(self):
         self.filename = 'test_file.txt'
-        page = requests.get('http://shop.numitea.com/Mate-Lemon/p/NUMIS-10250&c=NumiTeaStore@Teabag@Green')
+        page = requests.get('http://shop.numitea.com/Mate-Lemon/p/NUMIS-10250&c=NumiTeaStore@Teabag@Green').text
         self.structured_page = BeautifulSoup(page, 'lxml')
 
     def test_write_page_to_file(self):
@@ -80,12 +80,12 @@ def test_find_id(url='http://shop.numitea.com/Mate-Lemon/p/NUMIS-10250&c=NumiTea
 def test_identify_duplicates(url='http://shop.numitea.com/Mate-Lemon/p/NUMIS-10250&c=NumiTeaStore@Teabag@Green',
                              master_list=set(), id_sequence='NUMIS-[0-9]*'):
     result = websclass.identify_duplicates(url, master_list, id_sequence)
-    assert result
+    assert not result
     master_list.add('NUMIS-10250')
     next_result = websclass.identify_duplicates(url, master_list, id_sequence)
-    assert not next_result
+    assert next_result
 
-
+"""
 class TestMainScraper:
 
     def setUp(self):
@@ -96,3 +96,4 @@ class TestMainScraper:
 
     async def test_main(self):
         pass
+"""

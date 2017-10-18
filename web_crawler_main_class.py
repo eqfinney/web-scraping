@@ -200,7 +200,7 @@ if __name__ == '__main__':
         # initialize the objects
         TeaLoader = URLoader('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType', client_session)
         NumiTeaScraper = PageScraper('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
-                                     'c=NumiTeaStore@ByType', 'NUMIS-[0-9]*')
+                                     'NumiTeaStore@ByType', 'NUMIS-[0-9]*')
         PrimaryScraper = MainScraper(TeaLoader, NumiTeaScraper, 'new_tea_corpus.html')
 
         loop.run_until_complete(PrimaryScraper.main())

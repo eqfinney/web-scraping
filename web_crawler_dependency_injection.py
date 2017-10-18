@@ -146,18 +146,18 @@ def find_id(url, id_sequence):
     return id_number
 
 
-def identify_duplicates(url, master_list, id_sequence):
+def identify_duplicates(url, master_set, id_sequence):
     """
     Determines whether the product has already been included in a master list of products.
     :param url: a URL from which to draw a product ID number
-    :param master_list: the master list of products with which to compare the product ID
+    :param master_set: the master set of products with which to compare the product ID
     :param id_sequence: the ID sequence used to ID products in a URL
     :return: a Boolean showing whether the product has been seen (T) or not (F)
     """
     id_number = find_id(url, id_sequence)
     if id_number:
-        # check that ID against the master_list
-        if id_number in master_list:
+        # check that ID against the master_set
+        if id_number in master_set:
             return True
         else:
             return False
@@ -188,7 +188,7 @@ if __name__ == '__main__':
     with aiohttp.ClientSession(loop=loop) as client_session:
         TeaLoader = URLoader('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType', client_session)
         NumiTeaScraper = PageScraper('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
-                                     'c=NumiTeaStore@ByType', 'NUMIS-[0-9]*', TeaLoader, 'new_tea_corpus.html')
+                                     'NumiTeaStore@ByType', 'NUMIS-[0-9]*', TeaLoader, 'new_tea_corpus.html')
         loop.run_until_complete(NumiTeaScraper.main())
 
     loop.close()
