@@ -1,0 +1,1 @@
+I explored testing, software design principles, and asynchronous programming in this project. Project is split into two pieces (web_crawler_dependency_injection.py and web_crawler_main_class.py) in order to compare two methods of OO software design.
