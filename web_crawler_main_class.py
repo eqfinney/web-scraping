@@ -3,8 +3,6 @@
 # Also, it doesn't work yet
 # Author: Emily Quinn Finney
 #
-# TODO: Rewrite the web crawler tests
-#
 
 import aiohttp
 import asyncio
@@ -36,7 +34,7 @@ class PageScraper:
         self.sequence = sequence
         self.id_sequence = id_sequence
         # keeps track of all IDs that have been seen so far
-        self.master_list = set()
+        self.master_set = set()
         # keeps track of all URLs that have been seen so far, per level
         self.queue = [url]
 
@@ -62,12 +60,20 @@ class PageScraper:
     def add_link_to_master(self, link):
 
         id_number = find_id(link, self.id_sequence)
-        if not identify_duplicates(link, self.master_list, self.id_sequence):
+        if not identify_duplicates(link, self.master_set, self.id_sequence):
             print(id_number)
-            self.master_list.add(id_number)
+            self.master_set.add(id_number)
             return True
 
         return False
+
+    def find_undiscovered(self):
+        undiscovered = list()
+        for link in self.queue:
+            if not identify_duplicates(link, self.master_set, self.id_sequence):
+                undiscovered.append(link)
+
+        return undiscovered
 
 
 class URLoader:
@@ -81,6 +87,7 @@ class URLoader:
             async with self.session.get(self.url) as response:
                 return await response.text()
 
+    # TODO: worth making this more unit-testable?
     async def open_page(self):
         """
         Opens a web page using the urllib.request library, and returns a Beautiful Soup object
@@ -106,18 +113,19 @@ def find_id(url, id_sequence):
     return id_number
 
 
-def identify_duplicates(url, master_list, id_sequence):
+# TODO: worth making this more unit-testable?
+def identify_duplicates(url, master_set, id_sequence):
     """
-    Determines whether the product has already been included in a master list of products.
+    Determines whether the product has already been included in a master set of products.
     :param url: a URL from which to draw a product ID number
-    :param master_list: the master list of products with which to compare the product ID
+    :param master_set: the master set of products with which to compare the product ID
     :param id_sequence: the ID sequence used to ID products in a URL
     :return: a Boolean showing whether the product has been seen (T) or not (F)
     """
     id_number = find_id(url, id_sequence)
     if id_number:
-        # check that ID against the master_list
-        if id_number in master_list:
+        # check that ID against the master_set
+        if id_number in master_set:
             return True
         else:
             return False
@@ -141,31 +149,48 @@ def write_page_to_file(structured_page, filename, inspect=False):
         f.write(page_string)
 
 
-async def main(url_loader, page_scraper, filename):
-    """
-    Recursively loads and scrapes pages based on
-    :param url_loader: the object that loads URLs given to it
-    :param page_scraper: the object that scrapes HTML from a given web page
-    :param filename: the name of the file into which to write the HTML, string
-    :return:
-    """
-    print(page_scraper.queue)
-    undiscovered = [ x for x in page_scraper.queue
-                         if not identify_duplicates(x, page_scraper.master_list, page_scraper.id_sequence) ]
+class MainScraper:
 
-    # TODO: This doesn't work! Time to learn more about asyncio :D
-    for link in undiscovered:
-        if page_scraper.add_link_to_master(url_loader.url):
-            url_loader.url = link
-            result = await url_loader.open_page()
-            write_page_to_file(result, filename)
-            # gets all urls that haven't yet been seen
-            page_scraper.locate_linked_pages(result)
+    def __init__(self, url_loader, page_scraper, filename):
+        """
+        Initializes the MainScraper class, which combines functionality of PageScraper and URLoader classes.
+        :param url_loader: the object that loads URLs given to it
+        :param page_scraper: the object that scrapes HTML from a given web page
+        :param filename: the name of the file into which to write the HTML, string
+        :return:
+        """
+        self.url_loader = url_loader
+        self.page_scraper = page_scraper
+        self.filename = filename
 
-    # gather the tasks and run the recursion asynchronously
-    tasks = [ main(url_loader, page_scraper, filename) ]
-    # then update the master list with findings
-    await asyncio.gather(*tasks)
+    async def update_queue(self, link):
+        """
+        Opens the URLoader and updates the queue with information retrieved
+        :param link: the URL with which to update the queue
+        :return:
+        """
+        self.page_scraper.add_link_to_master(link)
+        self.url_loader.url = link
+        result = await self.url_loader.open_page()
+        write_page_to_file(result, self.filename)
+        # gets all urls that haven't yet been seen
+        self.page_scraper.locate_linked_pages(result)
+        self.page_scraper.queue.remove(link)
+
+    async def main(self):
+        """
+        Loads and scrapes pages.
+        :return:
+        """
+        await self.update_queue(self.url_loader.url)
+
+        while len(self.page_scraper.queue) > 0:
+            # get the first link in the queue, will be removed at the end of self.update_queue()
+            link = self.page_scraper.queue[0]
+            if not identify_duplicates(link, self.page_scraper.master_set, self.page_scraper.id_sequence):
+                await self.update_queue(link)
+            else:
+                self.page_scraper.queue.remove(link)
 
 
 if __name__ == '__main__':
@@ -177,7 +202,8 @@ if __name__ == '__main__':
         TeaLoader = URLoader('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType', client_session)
         NumiTeaScraper = PageScraper('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
                                      'c=NumiTeaStore@ByType', 'NUMIS-[0-9]*')
+        PrimaryScraper = MainScraper(TeaLoader, NumiTeaScraper, 'new_tea_corpus.html')
 
-        loop.run_until_complete(main(TeaLoader, NumiTeaScraper, 'new_tea_corpus.html'))
+        loop.run_until_complete(PrimaryScraper.main())
 
     loop.close()
