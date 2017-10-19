@@ -7,24 +7,79 @@ from bs4 import BeautifulSoup
 import os
 import pytest
 import requests
-import unittest
 import web_crawler_main_class as websclass
 
 
-# TODO: figure out what's up with pytest-asyncio event_loop fixture
+@pytest.fixture
+def link():
+    return 'http://shop.numitea.com/Mate-Lemon/p/NUMIS-10250&c=NumiTeaStore@Teabag@Green'
+
+
+@pytest.fixture
+def structured_page(link):
+    page = requests.get(link).text
+    return BeautifulSoup(page, 'lxml')
+
+
+@pytest.fixture
+def crawler(link):
+    return websclass.PageScraper(link, 'NumiTeaStore', 'NUMIS-[0-9]*')
+
+
 @pytest.fixture
 @pytest.mark.asyncio
-def loader(event_loop):
+def loader(event_loop, link):
     import aiohttp
     with aiohttp.ClientSession(loop=event_loop) as client_session:
         # initialize the objects
-        return websclass.URLoader('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType', client_session)
+        yield websclass.URLoader(link, client_session)
+
+
+@pytest.fixture
+def filename():
+    filename = 'test_file.txt'
+    yield filename
+    print("commence filename teardown")
+    if os.path.isfile(filename):
+        os.remove(filename)
+
+
+@pytest.fixture
+def scraper(loader, crawler, filename):
+    return websclass.MainScraper(loader, crawler, filename)
+
+
+def test_locate_linked_pages(crawler, structured_page):
+    set_of_links = crawler.locate_linked_pages(structured_page)
+    for thing in set_of_links:
+        assert crawler.sequence in thing
+
+
+def test_add_link_to_master(crawler, link):
+    master_list_before = len(crawler.master_set)
+    result = crawler.add_link_to_master(link)
+    assert result
+    master_list_after = len(crawler.master_set)
+    assert master_list_after == master_list_before + 1
+
+
+def test_find_id(link, id_sequence='NUMIS-[0-9]*'):
+    number = websclass.find_id(link, id_sequence)
+    assert number == 'NUMIS-10250'
+
+
+def test_identify_duplicates(link, master_list=set(), id_sequence='NUMIS-[0-9]*'):
+    result = websclass.identify_duplicates(link, master_list, id_sequence)
+    assert not result
+    master_list.add('NUMIS-10250')
+    next_result = websclass.identify_duplicates(link, master_list, id_sequence)
+    assert next_result
 
 
 @pytest.mark.asyncio
 async def test_fetch(loader):
     response = await loader.fetch()
-    print(response.text)
+    print(response)
 
 
 @pytest.mark.asyncio
@@ -33,67 +88,15 @@ async def test_open_page(loader):
     print(structured_page)
 
 
-class TestPageScraper(unittest.TestCase):
-
-    def setUp(self):
-        self.crawler = websclass.PageScraper('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
-                                             'NumiTeaStore@ByType', 'NUMIS-[0-9]*')
-        page = requests.get(self.crawler.url).text
-        self.structured_page = BeautifulSoup(page, 'lxml')
-
-    def test_locate_linked_pages(self):
-        set_of_links = self.crawler.locate_linked_pages(self.structured_page)
-        for thing in set_of_links:
-            assert self.crawler.sequence in thing
-
-    def test_add_link_to_master(self,
-                                link='http://shop.numitea.com/Mate-Lemon/p/NUMIS-10250&c=NumiTeaStore@Teabag@Green'):
-        master_list_before = len(self.crawler.master_set)
-        result = self.crawler.add_link_to_master(link)
-        assert result
-        master_list_after = len(self.crawler.master_set)
-        assert master_list_after == master_list_before + 1
+def test_write_page_to_file(filename, structured_page):
+    websclass.write_page_to_file(structured_page, filename)
+    assert os.path.isfile(filename)
 
 
-class TestWritePage(unittest.TestCase):
-
-    def setUp(self):
-        self.filename = 'test_file.txt'
-        page = requests.get('http://shop.numitea.com/Mate-Lemon/p/NUMIS-10250&c=NumiTeaStore@Teabag@Green').text
-        self.structured_page = BeautifulSoup(page, 'lxml')
-
-    def test_write_page_to_file(self):
-        websclass.write_page_to_file(self.structured_page, self.filename)
-        # assert filename exists
-        assert os.path.isfile(self.filename)
-
-    def tearDown(self):
-        os.remove(self.filename)
-
-
-def test_find_id(url='http://shop.numitea.com/Mate-Lemon/p/NUMIS-10250&c=NumiTeaStore@Teabag@Green',
-                 id_sequence='NUMIS-[0-9]*'):
-    number = websclass.find_id(url, id_sequence)
-    assert number == 'NUMIS-10250'
-
-
-def test_identify_duplicates(url='http://shop.numitea.com/Mate-Lemon/p/NUMIS-10250&c=NumiTeaStore@Teabag@Green',
-                             master_list=set(), id_sequence='NUMIS-[0-9]*'):
-    result = websclass.identify_duplicates(url, master_list, id_sequence)
-    assert not result
-    master_list.add('NUMIS-10250')
-    next_result = websclass.identify_duplicates(url, master_list, id_sequence)
-    assert next_result
-
-"""
-class TestMainScraper:
-
-    def setUp(self):
-        pass
-
-    async def test_update_queue(self, link):
-        pass
-
-    async def test_main(self):
-        pass
-"""
+@pytest.mark.asyncio
+async def test_update_queue(scraper, link):
+    count_before = scraper.page_scraper.queue.count(link)
+    await scraper.update_queue(link)
+    # test that it changed url loader
+    assert scraper.url_loader.url == link
+    # TODO: test that it removed link from queue

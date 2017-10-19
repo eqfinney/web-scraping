@@ -18,7 +18,7 @@ try:
 except ImportError:
     pass
 
-logging.basicConfig(level=logging.DEBUG)
+#logging.basicConfig(level=logging.DEBUG)
 
 
 class PageScraper:
@@ -56,11 +56,12 @@ class PageScraper:
 
         return self.queue
 
+    # TODO: make sure these have docstrings
     def add_link_to_master(self, link):
 
         id_number = find_id(link, self.id_sequence)
         if not identify_duplicates(link, self.master_set, self.id_sequence):
-            print(id_number)
+            #print(id_number)
             self.master_set.add(id_number)
             return True
 
@@ -73,28 +74,6 @@ class PageScraper:
                 undiscovered.append(link)
 
         return undiscovered
-
-
-class URLoader:
-
-    def __init__(self, url, session):
-        self.url = url
-        self.session = session
-
-    async def fetch(self):
-        with async_timeout.timeout(10):
-            async with self.session.get(self.url) as response:
-                return await response.text()
-
-    # TODO: worth making this more unit-testable?
-    async def open_page(self):
-        """
-        Opens a web page using the urllib.request library, and returns a Beautiful Soup object
-        :return: structured_page, the BeautifulSoup object
-        """
-        page = await self.fetch()
-        structured_page = BeautifulSoup(page, 'lxml')
-        return structured_page
 
 
 def find_id(url, id_sequence):
@@ -131,6 +110,28 @@ def identify_duplicates(url, master_set, id_sequence):
     # if no ID number, treat the page as a duplicate and don't add it to the list
     else:
         return True
+
+
+class URLoader:
+
+    def __init__(self, url, session):
+        self.url = url
+        self.session = session
+
+    async def fetch(self):
+        with async_timeout.timeout(10):
+            async with self.session.get(self.url) as response:
+                return await response.text()
+
+    # TODO: worth making this more unit-testable?
+    async def open_page(self):
+        """
+        Opens a web page using the urllib.request library, and returns a Beautiful Soup object
+        :return: structured_page, the BeautifulSoup object
+        """
+        page = await self.fetch()
+        structured_page = BeautifulSoup(page, 'lxml')
+        return structured_page
 
 
 def write_page_to_file(structured_page, filename, inspect=False):
@@ -200,7 +201,7 @@ if __name__ == '__main__':
         # initialize the objects
         TeaLoader = URLoader('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType', client_session)
         NumiTeaScraper = PageScraper('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
-                                     'NumiTeaStore@ByType', 'NUMIS-[0-9]*')
+                                     'NumiTeaStore', 'NUMIS-[0-9]*')
         PrimaryScraper = MainScraper(TeaLoader, NumiTeaScraper, 'new_tea_corpus.html')
 
         loop.run_until_complete(PrimaryScraper.main())

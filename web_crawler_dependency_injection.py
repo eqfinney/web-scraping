@@ -21,7 +21,28 @@ try:
 except ImportError:
     pass
 
-logging.basicConfig(level=logging.DEBUG)
+#logging.basicConfig(level=logging.DEBUG)
+
+
+class URLoader:
+
+    def __init__(self, url, session):
+        self.url = url
+        self.session = session
+
+    async def fetch(self):
+        with async_timeout.timeout(10):
+            async with self.session.get(self.url) as response:
+                return await response.text()
+
+    async def open_page(self):
+        """
+        Opens a web page using the urllib.request library, and returns a Beautiful Soup object
+        :return: structured_page, the BeautifulSoup object
+        """
+        page = await self.fetch()
+        structured_page = BeautifulSoup(page, 'lxml')
+        return structured_page
 
 
 class PageScraper:
@@ -66,7 +87,7 @@ class PageScraper:
 
         id_number = find_id(link, self.id_sequence)
         if not identify_duplicates(link, self.master_set, self.id_sequence):
-            print(id_number)
+            #print(id_number)
             self.master_set.add(id_number)
             return True
 
@@ -108,27 +129,6 @@ class PageScraper:
                 await self.update_queue(link)
             else:
                 self.queue.remove(link)
-
-
-class URLoader:
-
-    def __init__(self, url, session):
-        self.url = url
-        self.session = session
-
-    async def fetch(self):
-        with async_timeout.timeout(10):
-            async with self.session.get(self.url) as response:
-                return await response.text()
-
-    async def open_page(self):
-        """
-        Opens a web page using the urllib.request library, and returns a Beautiful Soup object
-        :return: structured_page, the BeautifulSoup object
-        """
-        page = await self.fetch()
-        structured_page = BeautifulSoup(page, 'lxml')
-        return structured_page
 
 
 def find_id(url, id_sequence):
@@ -188,7 +188,7 @@ if __name__ == '__main__':
     with aiohttp.ClientSession(loop=loop) as client_session:
         TeaLoader = URLoader('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType', client_session)
         NumiTeaScraper = PageScraper('http://shop.numitea.com/Tea-by-Type/c/NumiTeaStore@ByType',
-                                     'NumiTeaStore@ByType', 'NUMIS-[0-9]*', TeaLoader, 'new_tea_corpus.html')
+                                     'NumiTeaStore', 'NUMIS-[0-9]*', TeaLoader, 'new_tea_corpus.html')
         loop.run_until_complete(NumiTeaScraper.main())
 
     loop.close()
