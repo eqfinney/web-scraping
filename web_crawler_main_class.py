@@ -112,6 +112,21 @@ def identify_duplicates(url, master_set, id_sequence):
         return True
 
 
+def write_page_to_file(structured_page, filename, inspect=False):
+    """
+    Writes a page to file.
+    :param structured_page: a page structured in Beautiful Soup format
+    :param filename: the name of a file into which to write the HTML
+    :param inspect: Boolean, a parameter indicating whether to print he page before writing
+    :return:
+    """
+    page_string = structured_page.prettify()
+    if inspect:
+        print(page_string)
+    with open(filename, 'a') as f:
+        f.write(page_string)
+
+
 class URLoader:
 
     def __init__(self, url, session):
@@ -132,21 +147,6 @@ class URLoader:
         page = await self.fetch()
         structured_page = BeautifulSoup(page, 'lxml')
         return structured_page
-
-
-def write_page_to_file(structured_page, filename, inspect=False):
-    """
-    Writes a page to file.
-    :param structured_page: a page structured in Beautiful Soup format
-    :param filename: the name of a file into which to write the HTML
-    :param inspect: Boolean, a parameter indicating whether to print he page before writing
-    :return:
-    """
-    page_string = structured_page.prettify()
-    if inspect:
-        print(page_string)
-    with open(filename, 'a') as f:
-        f.write(page_string)
 
 
 class MainScraper:
