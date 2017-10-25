@@ -7,7 +7,7 @@ import aiohttp
 import asyncio
 import async_timeout
 from bs4 import BeautifulSoup
-import logging
+#import logging
 import re
 from urllib.parse import urlparse
 
@@ -23,7 +23,7 @@ except ImportError:
 
 class PageScraper:
 
-    def __init__(self, url, sequence, id_sequence):
+    def __init__(self, url, sequence, id_sequence, queue=set()):
         """
         Initializes the PageScraper class.
         :param sequence: the sequence to which all URLs must be matched if they are to be scraped, string
@@ -35,7 +35,10 @@ class PageScraper:
         # keeps track of all IDs that have been seen so far
         self.master_set = set()
         # keeps track of all URLs that have been seen so far, per level
-        self.queue = [url]
+        if len(queue) == 0:
+            self.queue = [url]
+        else:
+            self.queue = queue
 
     def locate_linked_pages(self, structured_page):
         """
@@ -61,7 +64,7 @@ class PageScraper:
 
         id_number = find_id(link, self.id_sequence)
         if not identify_duplicates(link, self.master_set, self.id_sequence):
-            #print(id_number)
+            print(id_number)
             self.master_set.add(id_number)
             return True
 

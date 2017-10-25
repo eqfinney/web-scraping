@@ -62,7 +62,10 @@ class PageScraper:
         # keeps track of all IDs that have been seen so far
         self.master_set = set()
         # keeps track of all URLs that have been seen so far, per level
-        self.queue = [url]
+        if len(queue) == 0:
+            self.queue = [url]
+        else:
+            self.queue = queue
 
     def locate_linked_pages(self, structured_page):
         """
