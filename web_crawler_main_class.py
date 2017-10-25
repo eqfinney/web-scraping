@@ -23,7 +23,7 @@ except ImportError:
 
 class PageScraper:
 
-    def __init__(self, url, sequence, id_sequence, queue=set()):
+    def __init__(self, url, sequence, id_sequence, queue=list()):
         """
         Initializes the PageScraper class.
         :param sequence: the sequence to which all URLs must be matched if they are to be scraped, string
